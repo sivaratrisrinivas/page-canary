@@ -9,8 +9,10 @@ async fn main() -> anyhow::Result<()> {
     match args.get(1).map(|s| s.as_str()) {
         Some("snap") => snap(args.get(2).map(|s| s.as_str()).unwrap_or("fixtures/real/plan.json")).await,
         Some("eval") => { let r = eval::run_all("fixtures")?; eval::write(&r, "eval")?; println!("{}", eval::summary_md(&r)); Ok(()) }
+        Some("check") => server::check_cmd(args.get(2).map(|s| s.as_str()).unwrap_or("state/live.json")).await,
+        Some("site") => server::site_cmd(args.get(2).map(|s| s.as_str()).unwrap_or("public"), args.get(3).map(|s| s.as_str())),
         Some("serve") | None => server::serve().await,
-        Some(x) => anyhow::bail!("unknown command {x}; use serve | eval | snap"),
+        Some(x) => anyhow::bail!("unknown command {x}; use serve | check | site | eval | snap"),
     }
 }
 

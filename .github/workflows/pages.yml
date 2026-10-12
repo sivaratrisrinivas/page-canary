@@ -1,0 +1,29 @@
+name: monitor-and-pages
+# The live demo: one polite pass over targets.json every 6 hours, then publish the dashboard.
+on:
+  schedule: [{ cron: "17 */6 * * *" }]
+  workflow_dispatch:
+  push: { branches: [main] }
+permissions: { contents: read, pages: write, id-token: write }
+concurrency: { group: pages, cancel-in-progress: false }
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    environment: { name: github-pages, url: "${{ steps.deploy.outputs.page_url }}" }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@1.85
+      - uses: Swatinem/rust-cache@v2
+      - name: restore last baselines
+        uses: actions/cache/restore@v4
+        with: { path: state, key: "state-${{ github.run_id }}", restore-keys: "state-" }
+      - run: cargo build --release --locked
+      - name: one polite check of every target
+        run: ./target/release/page-canary check state/live.json
+      - uses: actions/cache/save@v4
+        with: { path: state, key: "state-${{ github.run_id }}" }
+      - run: ./target/release/page-canary site public state/live.json
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: public }
+      - id: deploy
+        uses: actions/deploy-pages@v4
