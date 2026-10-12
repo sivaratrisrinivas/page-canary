@@ -1,0 +1,5413 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="defaultLanguage" content="en">
+    <meta name="availableLanguages" content="en, es, fr, ja, pt_BR, uk, el, de, zh_Hans, ru">
+
+    
+
+    <title>requests · PyPI</title>
+    <meta name="description" content="Python HTTP for Humans.">
+
+    <link rel="stylesheet" href="/static/css/warehouse.311075c5.css">
+    <link rel="stylesheet" href="/static/css/fontawesome.6002a161.css">
+    <link rel="stylesheet" href="/static/css/regular.98fbf39a.css">
+    <link rel="stylesheet" href="/static/css/solid.c3b5f0b5.css">
+    <link rel="stylesheet" href="/static/css/brands.2c303be1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700,700italic%7CSource+Code+Pro:500">
+    <noscript>
+      <link rel="stylesheet" href="/static/css/noscript.14e57721.css">
+    </noscript>
+
+    
+
+    <link rel="icon" href="/static/images/favicon.6a76275d.ico" type="image/x-icon">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS: 40 latest updates" href="/rss/updates.xml">
+    <link rel="alternate" type="application/rss+xml" title="RSS: 40 newest packages" href="/rss/packages.xml">
+    <link rel="alternate" type="application/rss+xml" title="RSS: latest releases for requests" href="/rss/project/requests/releases.xml">
+    
+    <link rel="canonical" href="https://pypi.org/project/requests/">
+    
+
+    <meta property="og:url" content="https://pypi.org/project/requests/">
+    <meta property="og:site_name" content="PyPI">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pypi.org/static/images/twitter.90915068.jpg">
+    <meta property="og:title" content="requests">
+    <meta property="og:description" content="Python HTTP for Humans.">
+
+    <link rel="search" type="application/opensearchdescription+xml" title="PyPI" href="/opensearch.xml">
+
+    
+    <script
+      src="https://cdn.ravenjs.com/3.26.2/raven.min.js"
+      integrity="sha384-D6LXy67EIC102DTuqypxwQsTHgiatlbvg7q/1YAWFb6lRyZ1lIZ6bGDsX7jxHNKA"
+      crossorigin="anonymous">
+    </script>
+    
+    <script async
+            data-ga-id="UA-55961911-1"
+            data-sentry-frontend-dsn="https://3a67b35c9dc248a191d761410b095861@sentry.io/1231155"
+            src="/static/js/warehouse.5a36742c.js">
+    </script>
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55961911-1"></script>
+    <script defer src="https://www.fastly-insights.com/insights.js?k=6a52360a-f306-421e-8ed5-7417d0d4a4e9&dnt=true"></script>
+  </head>
+
+  <body data-controller="viewport-toggle">
+    
+
+    <!-- Accessibility: this link should always be the first piece of content inside the body-->
+    <a href="#content" class="skip-to-content">Skip to main content</a>
+
+    <button type="button" class="button button--primary button--switch-to-mobile hidden" data-target="viewport-toggle.switchToMobile" data-action="viewport-toggle#switchToMobile">
+      Switch to mobile version
+    </button>
+
+    <div id="sticky-notifications" class="stick-to-top js-stick-to-top">
+      <!-- Add browser warning. Will show for ie9 and below -->
+      <!--[if IE]>
+      <div class="notification-bar notification-bar--warning" role="status">
+        <span class="notification-bar__icon">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          <span class="sr-only">Warning</span>
+        </span>
+        <span class="notification-bar__message">You are using an unsupported browser, upgrade to a newer version.</span>
+      </div>
+      <![endif]-->
+      
+      <noscript>
+      <div class="notification-bar notification-bar--warning" role="status">
+        
+        <span class="notification-bar__icon">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          <span class="sr-only">Warning</span>
+        </span>
+        <span class="notification-bar__message">Some features may not work without JavaScript. Please try enabling it if you encounter problems.</span>
+      </div>
+      </noscript>
+    </div>
+
+    
+      <div data-html-include="/_includes/flash-messages/">
+      </div>
+    
+
+    
+
+    
+      <div data-html-include="/_includes/session-notifications/">
+      </div>
+    
+
+    <header class="site-header ">
+      <div class="site-container">
+        <div class="split-layout">
+          
+          <div class="split-layout">
+            <div>
+              <a class="site-header__logo" href="/">
+                <img alt="PyPI" src="/static/images/logo-small.6eef541e.svg">
+              </a>
+            </div>
+
+            <form class="search-form search-form--primary" action="/search/" role="search">
+              <label for="search" class="sr-only">Search PyPI</label>
+              <input id="search" class="search-form__search" type="text" name="q" placeholder="Search projects" value="" autocomplete="off" autocapitalize="off" spellcheck="false">
+              
+              <button type="submit" class="search-form__button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <span class="sr-only">Search</span>
+              </button>
+            </form>
+          </div>
+          
+
+          <div data-html-include="/_includes/current-user-indicator/">
+            <div id="user-indicator" class="horizontal-menu horizontal-menu--light horizontal-menu--tall">
+  <nav class="horizontal-menu horizontal-menu--light horizontal-menu--tall hide-on-tablet" aria-label="Main navigation">
+    <ul>
+      <li class="horizontal-menu__item"><a href="/help/" class="horizontal-menu__link">Help</a></li>
+      <li class="horizontal-menu__item"><a href="/sponsor/" class="horizontal-menu__link">Sponsor</a></li>
+      <li class="horizontal-menu__item"><a href="/account/login/" class="horizontal-menu__link">Log in</a></li>
+      <li class="horizontal-menu__item"><a href="/account/register/" class="horizontal-menu__link">Register</a></li>
+    </ul>
+  </nav>
+  <nav class="dropdown dropdown--on-menu hidden show-on-tablet" aria-label="Main navigation">
+    <button type="button" class="horizontal-menu__link dropdown__trigger" aria-haspopup="true" aria-expanded="false" aria-label="View menu">
+      Menu
+      <span class="dropdown__trigger-caret">
+        <i class="fa fa-caret-down" aria-hidden="true"></i>
+      </span>
+    </button>
+    <ul class="dropdown__content" aria-hidden="true" aria-label="Main menu">
+      <li><a class="dropdown__link" href="/help/">Help</a></li>
+      <li><a class="dropdown__link" href="/sponsor/">Sponsor</a></li>
+      <li><a class="dropdown__link" href="/account/login/">Log in</a></li>
+      <li><a class="dropdown__link" href="/account/register/">Register</a></li>
+    </ul>
+  </nav>
+</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <div class="mobile-search">
+      <form class="search-form search-form--fullwidth" action="/search/" role="search">
+        <label for="mobile-search" class="sr-only">Search PyPI</label>
+        <input id="mobile-search" class="search-form__search" type="text" name="q" placeholder="Search projects" value="" autocomplete="off" autocapitalize="off" spellcheck="false">
+        
+        <button type="submit" class="search-form__button">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <span class="sr-only">Search</span>
+        </button>
+      </form>
+    </div>
+    
+
+    <main id="content">
+      
+<div class="banner">
+  <div class="package-header">
+    <div class="package-header__left">
+      <h1 class="package-header__name">
+        requests 2.23.0
+      </h1>
+
+      
+      <p class="package-header__pip-instructions">
+        <span id="pip-command">pip install requests</span>
+        <button type="button" class="copy-tooltip copy-tooltip-s" data-clipboard-target="#pip-command" data-tooltip-label="Copy to clipboard">
+          <i class="fa fa-copy" aria-hidden="true"></i>
+          <span class="sr-only">Copy PIP instructions</span>
+        </button>
+      </p>
+      
+    </div>
+
+    <div class="package-header__right">
+    
+      
+      <a class="status-badge status-badge--good" href="/project/requests/">
+        <span>Latest version</span>
+      </a>
+      
+    
+      <p class="package-header__date">
+        Released: <time datetime="2020-02-19T18:50:59+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 19, 2020
+</time>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="horizontal-section horizontal-section--grey horizontal-section--thin">
+  <div class="site-container">
+    <div class="split-layout split-layout--middle package-description">
+    
+      <p class="package-description__summary">Python HTTP for Humans.</p>
+    
+    <div data-html-include="/_includes/edit-project-button/requests">
+    </div>
+    </div>
+  </div>
+</div>
+
+<div data-controller="project-tabs">
+  <div class="tabs-container">
+    <div class="vertical-tabs">
+      <div class="vertical-tabs__tabs">
+        <div class="sidebar-section">
+          <h3 class="sidebar-section__title">Navigation</h3>
+          <nav aria-label="Navigation for requests">
+            <ul class="vertical-tabs__list" role="tablist">
+              <li role="tab">
+                <a id="description-tab" href="#description" data-target="project-tabs.tab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--is-active" aria-selected="true" aria-label="Project description. Focus will be moved to the description.">
+                  <i class="fa fa-align-left" aria-hidden="true"></i>
+                  Project description
+                </a>
+              </li>
+              <li role="tab">
+                <a id="history-tab" href="#history" data-target="project-tabs.tab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon" aria-label="Release history. Focus will be moved to the history panel.">
+                  <i class="fa fa-history" aria-hidden="true"></i>
+                  Release history
+                </a>
+              </li>
+              
+              <li role="tab">
+                <a id="files-tab" href="#files" data-target="project-tabs.tab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon" aria-label="Download files. Focus will be moved to the project files.">
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                  Download files
+                </a>
+              </li>
+              
+            </ul>
+          </nav>
+        </div>
+        
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Project links</h3>
+  <ul class="vertical-tabs__list">
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://requests.readthedocs.io" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-home" aria-hidden="true"></i>Homepage
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://requests.readthedocs.io" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-book" aria-hidden="true"></i>Documentation
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://github.com/psf/requests" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fab fa-github" aria-hidden="true"></i>Source
+      </a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Statistics</h3>
+  
+  <div class="github-repo-info hidden" data-url="https://api.github.com/repos/psf/requests">
+    GitHub statistics:
+    <ul class="vertical-tabs__list">
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed github-repo-info__item"
+           data-key="html_url" data-attr="href" data-supplement="/stargazers" rel="noopener">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <strong>Stars:</strong>
+          <span class="github-repo-info__item" data-key="stargazers_count"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed github-repo-info__item"
+           data-key="html_url" data-attr="href" data-supplement="/network/members" rel="noopener">
+          <i class="fa fa-code-branch" aria-hidden="true"></i>
+          <strong>Forks:</strong>
+          <span class="github-repo-info__item" data-key="forks_count"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed github-repo-info__item"
+           data-key="html_url" data-attr="href" data-supplement="/issues" rel="noopener">
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <strong>Open issues/PRs:</strong>
+          <span class="github-repo-info__item" data-key="open_issues_count"></span>
+        </a>
+      <li>
+    </ul>
+  </div>
+  
+  <p>
+    View statistics for this project via <a href="https://libraries.io/pypi/requests" title="External link" target="_blank" rel="noopener">Libraries.io</a>, or by using <a href="https://packaging.python.org/guides/analyzing-pypi-package-downloads/" target="_blank" rel="noopener">our public dataset on Google BigQuery</a>
+  </p>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Meta</h3>
+  
+  <p><strong>License:</strong> Apache Software License (Apache 2.0)</p>
+  
+  
+    <p><strong>Author:</strong> <a href="mailto:me@kennethreitz.org">Kenneth Reitz</a></p>
+  
+  
+  
+  
+  <p>
+    <strong>Requires:</strong> Python &gt;=2.7,  !=3.0.*,  !=3.1.*,  !=3.2.*,  !=3.3.*,  !=3.4.*
+  </p>
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Maintainers</h3>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/graffatcolmingov/" aria-label="graffatcolmingov">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/cc51c37d0c7604e3c0825efceb9e26f84427f67e/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f33393665336465353333323061626639383535643931326364336439343331663f73697a653d3530" height="50" width="50" alt="Avatar for graffatcolmingov from gravatar.com" title="Avatar for graffatcolmingov from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          graffatcolmingov
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/Lukasa/" aria-label="Lukasa">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/c79bcf4dbcf29e6ff2393371939bec26953fab5f/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f62356165656530356138663435326339623131336435313239383065623065343f73697a653d3530" height="50" width="50" alt="Avatar for Lukasa from gravatar.com" title="Avatar for Lukasa from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          Lukasa
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/nateprewitt/" aria-label="nateprewitt">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/b35e3b7909504680a0db25a146ec8ef1028830e6/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f66333733383231373065396436613962363632653739353331313730343232653f73697a653d3530" height="50" width="50" alt="Avatar for nateprewitt from gravatar.com" title="Avatar for nateprewitt from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          nateprewitt
+        </span>
+      </a>
+    </span>
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Classifiers</h3>
+  <ul class="sidebar-section__classifiers">
+    
+    <li>
+      <strong>Development Status</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Development+Status+%3A%3A+5+-+Production%2FStable">
+            5 - Production/Stable
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Intended Audience</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Intended+Audience+%3A%3A+Developers">
+            Developers
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>License</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=License+%3A%3A+OSI+Approved+%3A%3A+Apache+Software+License">
+            OSI Approved :: Apache Software License
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Natural Language</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Natural+Language+%3A%3A+English">
+            English
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Programming Language</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python">
+            Python
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+2">
+            Python :: 2
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+2.7">
+            Python :: 2.7
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3">
+            Python :: 3
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.5">
+            Python :: 3.5
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.6">
+            Python :: 3.6
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.7">
+            Python :: 3.7
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.8">
+            Python :: 3.8
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+Implementation+%3A%3A+CPython">
+            Python :: Implementation :: CPython
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+Implementation+%3A%3A+PyPy">
+            Python :: Implementation :: PyPy
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+</div>
+
+
+      </div>
+      <div class="vertical-tabs__panel">
+        <!-- mobile menu -->
+        <nav aria-label="Navigation for requests">
+          <ul class="vertical-tabs__list" role="tablist">
+            <li role="tab">
+              <a id="mobile-description-tab" href="#description" data-target="project-tabs.mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile vertical-tabs__tab--no-top-border vertical-tabs__tab--is-active" aria-selected="true" aria-label="Project description. Focus will be moved to the description.">
+                <i class="fa fa-align-left" aria-hidden="true"></i>
+                Project description
+              </a>
+            </li>
+            <li role="tab">
+              <a id="mobile-data-tab" href="#data" data-target="project-tabs.mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile" aria-label="Project details. Focus will be moved to the project details.">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                Project details
+              </a>
+            </li>
+            <li role="tab">
+              <a id="mobile-history-tab" href="#history" data-target="project-tabs.mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile" aria-label="Release history. Focus will be moved to the history panel.">
+              <i class="fa fa-history" aria-hidden="true"></i>
+              Release history
+            </a>
+            </li>
+            
+            <li role="tab">
+              <a id="mobile-files-tab" href="#files" data-target="project-tabs.mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile" aria-label="Download files. Focus will be moved to the project files.">
+                <i class="fa fa-download" aria-hidden="true"></i>
+                Download files
+              </a>
+            </li>
+            
+          </ul>
+        </nav>
+
+        
+        <div id="description" data-target="project-tabs.content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="description-tab mobile-description-tab" tabindex="-1">
+          <h2 class="page-title">Project description</h2>
+          
+          <div class="project-description">
+            <span>
+<pre>    <a href="https://requests.readthedocs.io/" rel=nofollow><img align=center src="https://warehouse-camo.ingress.cmh1.psfhosted.org/c420a02eb637e5edb7d063de891865f457467345/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f7073662f72657175657374732f6d61737465722f6578742f72657175657374732d6c6f676f2e706e67"></a>
+
+    <div>
+    <p></p>
+    <code> Python 3.7.4 (default, Sep  7 2019, 18:27:02)</code>
+    <code> &gt;&gt;&gt; <strong>import requests</strong></code>
+    <code> &gt;&gt;&gt; r = requests.get('https://api.github.com/repos/psf/requests')</code>
+    <code> &gt;&gt;&gt; r.json()["description"]</code>
+    <code> 'A simple, yet elegant HTTP library.'</code>
+    </div>
+
+    <p align=center>
+This software has been designed for you, with much joy,
+by <a href="https://kennethreitz.org/" rel=nofollow>Kenneth Reitz</a> &amp; is protected by The <a href="https://www.python.org/psf/" rel=nofollow>Python Software Foundation</a>.
+   </p>
+</pre>
+</span>
+<p> <p> </p>
+<p align=center><strong>Requests</strong> is an elegant and simple HTTP library for Python, built with ♥.</p>
+<p> </p>
+<pre><span class=gp>&gt;&gt;&gt; </span><span class=kn>import</span> <span class=nn>requests</span>
+<span class=gp>&gt;&gt;&gt; </span><span class=n>r</span> <span class=o>=</span> <span class=n>requests</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=s1>'https://api.github.com/user'</span><span class=p>,</span> <span class=n>auth</span><span class=o>=</span><span class=p>(</span><span class=s1>'user'</span><span class=p>,</span> <span class=s1>'pass'</span><span class=p>))</span>
+<span class=gp>&gt;&gt;&gt; </span><span class=n>r</span><span class=o>.</span><span class=n>status_code</span>
+<span class=go>200</span>
+<span class=gp>&gt;&gt;&gt; </span><span class=n>r</span><span class=o>.</span><span class=n>headers</span><span class=p>[</span><span class=s1>'content-type'</span><span class=p>]</span>
+<span class=go>'application/json; charset=utf8'</span>
+<span class=gp>&gt;&gt;&gt; </span><span class=n>r</span><span class=o>.</span><span class=n>encoding</span>
+<span class=go>'utf-8'</span>
+<span class=gp>&gt;&gt;&gt; </span><span class=n>r</span><span class=o>.</span><span class=n>text</span>
+<span class=go>u'{"type":"User"...'</span>
+<span class=gp>&gt;&gt;&gt; </span><span class=n>r</span><span class=o>.</span><span class=n>json</span><span class=p>()</span>
+<span class=go>{u'disk_usage': 368627, u'private_gists': 484, ...}</span>
+</pre>
+<hr>
+<p> </p>
+<p>Requests allows you to send HTTP/1.1 requests extremely easily. There’s no need to manually add query strings to your URLs, or to form-encode your <code>PUT</code> &amp; <code>POST</code> data — but nowadays, just use the <code>json</code> method!</p>
+<p>Requests is <strong>the most downloaded Python package today</strong>, pulling in around <code>14M downloads / week</code>— according to GitHub, Requests is currently <a href="https://github.com/psf/requests/network/dependents?package_id=UGFja2FnZS01NzA4OTExNg%3D%3D" rel=nofollow>depended upon</a> by <code>367_296</code> repositories. You may certainly put your trust in this code.</p>
+<p> </p>
+<p align=center><a href="https://pepy.tech/project/requests" rel=nofollow><img alt=Downloads src="https://warehouse-camo.ingress.cmh1.psfhosted.org/1cc1e15e950ebd9cef44d69cfa50a8c7202eb8af/68747470733a2f2f63616d6f2e67697468756275736572636f6e74656e742e636f6d2f653164656463396635636535636436623663363939663333643265383132646161646366333634352f36383734373437303733336132663266373036353730373932653734363536333638326636323631363436373635326637323635373137353635373337343733"></a>
+<a href="https://pypi.org/project/requests/" rel=nofollow><img alt=image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/2a3fbb5f8e45c280a84f57285ef381c4cb749cb3/68747470733a2f2f63616d6f2e67697468756275736572636f6e74656e742e636f6d2f366437386165656330613961316366653134376164303634626662393930363965323938653239622f363837343734373037333361326632663639366436373265373336383639363536633634373332653639366632663730373937303639326637303739373636353732373336393666366537333266373236353731373536353733373437333265373337363637"></a>
+<a href="https://github.com/psf/requests/graphs/contributors" rel=nofollow><img alt=image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/82a579464033afe87e6752f864ee7ae6a56e347e/68747470733a2f2f63616d6f2e67697468756275736572636f6e74656e742e636f6d2f613730656131353837306233386262613932303362393639663661366237653738343566626238612f36383734373437303733336132663266363936643637326537333638363936353663363437333265363936663266363736393734363837353632326636333666366537343732363936323735373436663732373332663730373336363266373236353731373536353733373437333265373337363637"></a></p>
+<p> </p>
+<h2>Supported Features &amp; Best–Practices</h2>
+<p>Requests is ready for the demands of building robust and reliable HTTP–speak applications, for the needs of today.</p>
+<pre>         + International Domains and URLs       + Keep-Alive &amp; Connection Pooling
+         + Sessions with Cookie Persistence     + Browser-style SSL Verification
+         + Basic &amp; Digest Authentication        + Familiar `dict`–like Cookies
+         + Automatic Decompression of Content   + Automatic Content Decoding
+         + Automatic Connection Pooling         + Unicode Response Bodies&lt;super&gt;*&lt;/super&gt;
+         + Multi-part File Uploads              + SOCKS Proxy Support
+         + Connection Timeouts                  + Streaming Downloads
+         + Automatic honoring of `.netrc`       + Chunked HTTP Requests
+
+                            &amp;, of course, rock–solid stability!
+</pre>
+
+<p align=center>
+        ✨ 🍰 ✨            
+</p>
+<p> </p>
+<h2>Requests Module Installation</h2>
+<p>The recommended way to intall the <code>requests</code> module is to simply use <a href="https://pipenv.kennethreitz.org" rel=nofollow><code>pipenv</code></a> (or <code>pip</code>, of
+course):</p>
+<pre><span class=gp>$</span> pipenv install requests
+<span class=go>Adding requests to Pipfile's [packages]…</span>
+<span class=go>✔ Installation Succeeded</span>
+<span class=go>…</span>
+</pre>
+<p>Requests officially supports Python 2.7 &amp; 3.5+.</p>
+<hr>
+<h2>P.S. — Documentation is Available at <a href="https://requests.readthedocs.io/en/latest/" rel=nofollow><code>//requests.readthedocs.io</code></a>.</h2>
+<p align=center>
+        <a href="https://requests.readthedocs.io/" rel=nofollow><img align=center src="https://warehouse-camo.ingress.cmh1.psfhosted.org/61c804fea57c31e85e5916f228c18b52bc4eb0c1/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f7073662f72657175657374732f6d61737465722f6578742f73732e706e67"></a>
+</p>
+<hr>
+<p> </p>
+<p align=center>
+        <a href="https://kennethreitz.org/" rel=nofollow><img align=center src="https://warehouse-camo.ingress.cmh1.psfhosted.org/a02bc771956705c2b7256cbaae03b3f5dd3315b9/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f7073662f72657175657374732f6d61737465722f6578742f6b722e706e67"></a>
+</p>
+<p> </p>
+<p align=center>
+        <a href="https://www.python.org/psf/" rel=nofollow><img align=center src="https://warehouse-camo.ingress.cmh1.psfhosted.org/ae73ee489779241cdaeff5cad05074b693eeb9e3/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f7073662f72657175657374732f6d61737465722f6578742f7073662e706e67"></a>
+</p>
+
+          </div>
+          
+        </div>
+
+        
+        <div id="data" data-target="project-tabs.content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="mobile-data-tab" tabindex="-1">
+          <h2 class="page-title">Project details</h2>
+          
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Project links</h3>
+  <ul class="vertical-tabs__list">
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://requests.readthedocs.io" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-home" aria-hidden="true"></i>Homepage
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://requests.readthedocs.io" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-book" aria-hidden="true"></i>Documentation
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://github.com/psf/requests" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fab fa-github" aria-hidden="true"></i>Source
+      </a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Statistics</h3>
+  
+  <div class="github-repo-info hidden" data-url="https://api.github.com/repos/psf/requests">
+    GitHub statistics:
+    <ul class="vertical-tabs__list">
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed github-repo-info__item"
+           data-key="html_url" data-attr="href" data-supplement="/stargazers" rel="noopener">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <strong>Stars:</strong>
+          <span class="github-repo-info__item" data-key="stargazers_count"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed github-repo-info__item"
+           data-key="html_url" data-attr="href" data-supplement="/network/members" rel="noopener">
+          <i class="fa fa-code-branch" aria-hidden="true"></i>
+          <strong>Forks:</strong>
+          <span class="github-repo-info__item" data-key="forks_count"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed github-repo-info__item"
+           data-key="html_url" data-attr="href" data-supplement="/issues" rel="noopener">
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <strong>Open issues/PRs:</strong>
+          <span class="github-repo-info__item" data-key="open_issues_count"></span>
+        </a>
+      <li>
+    </ul>
+  </div>
+  
+  <p>
+    View statistics for this project via <a href="https://libraries.io/pypi/requests" title="External link" target="_blank" rel="noopener">Libraries.io</a>, or by using <a href="https://packaging.python.org/guides/analyzing-pypi-package-downloads/" target="_blank" rel="noopener">our public dataset on Google BigQuery</a>
+  </p>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Meta</h3>
+  
+  <p><strong>License:</strong> Apache Software License (Apache 2.0)</p>
+  
+  
+    <p><strong>Author:</strong> <a href="mailto:me@kennethreitz.org">Kenneth Reitz</a></p>
+  
+  
+  
+  
+  <p>
+    <strong>Requires:</strong> Python &gt;=2.7,  !=3.0.*,  !=3.1.*,  !=3.2.*,  !=3.3.*,  !=3.4.*
+  </p>
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Maintainers</h3>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/graffatcolmingov/" aria-label="graffatcolmingov">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/cc51c37d0c7604e3c0825efceb9e26f84427f67e/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f33393665336465353333323061626639383535643931326364336439343331663f73697a653d3530" height="50" width="50" alt="Avatar for graffatcolmingov from gravatar.com" title="Avatar for graffatcolmingov from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          graffatcolmingov
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/Lukasa/" aria-label="Lukasa">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/c79bcf4dbcf29e6ff2393371939bec26953fab5f/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f62356165656530356138663435326339623131336435313239383065623065343f73697a653d3530" height="50" width="50" alt="Avatar for Lukasa from gravatar.com" title="Avatar for Lukasa from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          Lukasa
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/nateprewitt/" aria-label="nateprewitt">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/b35e3b7909504680a0db25a146ec8ef1028830e6/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f66333733383231373065396436613962363632653739353331313730343232653f73697a653d3530" height="50" width="50" alt="Avatar for nateprewitt from gravatar.com" title="Avatar for nateprewitt from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          nateprewitt
+        </span>
+      </a>
+    </span>
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Classifiers</h3>
+  <ul class="sidebar-section__classifiers">
+    
+    <li>
+      <strong>Development Status</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Development+Status+%3A%3A+5+-+Production%2FStable">
+            5 - Production/Stable
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Intended Audience</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Intended+Audience+%3A%3A+Developers">
+            Developers
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>License</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=License+%3A%3A+OSI+Approved+%3A%3A+Apache+Software+License">
+            OSI Approved :: Apache Software License
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Natural Language</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Natural+Language+%3A%3A+English">
+            English
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Programming Language</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python">
+            Python
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+2">
+            Python :: 2
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+2.7">
+            Python :: 2.7
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3">
+            Python :: 3
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.5">
+            Python :: 3.5
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.6">
+            Python :: 3.6
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.7">
+            Python :: 3.7
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.8">
+            Python :: 3.8
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+Implementation+%3A%3A+CPython">
+            Python :: Implementation :: CPython
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+Implementation+%3A%3A+PyPy">
+            Python :: Implementation :: PyPy
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+</div>
+
+          <br>
+        </div>
+
+        
+        <div id="history" data-target="project-tabs.content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="history-tab mobile-history-tab" tabindex="-1">
+          <h2 class="page-title split-layout">
+            <span>Release history</span>
+            <span class="reset-text margin-top">
+              <a href="/help/#project-release-notifications">Release notifications</a> |
+              <a href="/rss/project/requests/releases.xml">RSS feed <i class="fa fa-rss" aria-hidden="true"></i></a>
+            </span>
+          </h2>
+
+          <div class="release-timeline">
+            
+            
+            
+            
+            <div class="release release--latest release--current">
+              <div class="release__meta">
+                
+                <span class="badge">This version</span>
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/blue-cube.e6165d35.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.23.0/">
+                <p class="release__version">
+                  2.23.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2020-02-19T18:50:59+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 19, 2020
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.22.0/">
+                <p class="release__version">
+                  2.22.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2019-05-16T14:37:14+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 16, 2019
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.21.0/">
+                <p class="release__version">
+                  2.21.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-12-10T15:40:08+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 10, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.20.1/">
+                <p class="release__version">
+                  2.20.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-11-08T17:20:29+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Nov 8, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.20.0/">
+                <p class="release__version">
+                  2.20.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-10-18T15:46:10+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 18, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.19.1/">
+                <p class="release__version">
+                  2.19.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-06-14T13:40:38+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jun 14, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.19.0/">
+                <p class="release__version">
+                  2.19.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-06-12T14:46:15+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jun 12, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.18.4/">
+                <p class="release__version">
+                  2.18.4
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-08-15T13:23:43+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Aug 15, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.18.3/">
+                <p class="release__version">
+                  2.18.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-08-02T13:23:31+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Aug 2, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.18.2/">
+                <p class="release__version">
+                  2.18.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-07-25T15:23:15+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 25, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.18.1/">
+                <p class="release__version">
+                  2.18.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-06-14T17:51:25+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jun 14, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.18.0/">
+                <p class="release__version">
+                  2.18.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-06-14T15:44:35+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jun 14, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.17.3/">
+                <p class="release__version">
+                  2.17.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-05-29T21:53:19+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 29, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.17.2/">
+                <p class="release__version">
+                  2.17.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-05-29T21:33:32+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 29, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.17.1/">
+                <p class="release__version">
+                  2.17.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-05-29T19:59:39+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 29, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.17.0/">
+                <p class="release__version">
+                  2.17.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-05-29T17:24:35+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 29, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.16.5/">
+                <p class="release__version">
+                  2.16.5
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-05-28T04:35:44+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 28, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.16.4/">
+                <p class="release__version">
+                  2.16.4
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-05-27T21:17:38+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 27, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.16.3/">
+                <p class="release__version">
+                  2.16.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-05-27T16:24:47+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 27, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.16.2/">
+                <p class="release__version">
+                  2.16.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-05-27T14:53:09+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 27, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.16.1/">
+                <p class="release__version">
+                  2.16.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-05-27T13:43:53+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 27, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.16.0/">
+                <p class="release__version">
+                  2.16.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-05-27T03:45:40+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 27, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.15.1/">
+                <p class="release__version">
+                  2.15.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-05-27T02:14:19+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 27, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.15.0/">
+                <p class="release__version">
+                  2.15.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-05-27T01:42:45+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 27, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.14.2/">
+                <p class="release__version">
+                  2.14.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-05-10T14:05:39+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 10, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.14.1/">
+                <p class="release__version">
+                  2.14.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-05-09T19:00:26+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 9, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.14.0/">
+                <p class="release__version">
+                  2.14.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-05-09T15:45:03+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 9, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.13.0/">
+                <p class="release__version">
+                  2.13.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-01-24T12:53:25+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jan 24, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.12.5/">
+                <p class="release__version">
+                  2.12.5
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-01-18T12:43:08+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jan 18, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.12.4/">
+                <p class="release__version">
+                  2.12.4
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-12-14T11:39:35+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 14, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.12.3/">
+                <p class="release__version">
+                  2.12.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-12-01T10:49:02+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 1, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.12.2/">
+                <p class="release__version">
+                  2.12.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-11-30T12:39:31+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Nov 30, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.12.1/">
+                <p class="release__version">
+                  2.12.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-11-16T10:45:37+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Nov 16, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.12.0/">
+                <p class="release__version">
+                  2.12.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-11-15T10:32:00+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Nov 15, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.11.1/">
+                <p class="release__version">
+                  2.11.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-08-17T20:04:20+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Aug 17, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.11.0/">
+                <p class="release__version">
+                  2.11.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-08-08T15:07:26+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Aug 8, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.10.0/">
+                <p class="release__version">
+                  2.10.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-04-29T22:12:23+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Apr 29, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.9.2/">
+                <p class="release__version">
+                  2.9.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-04-29T21:56:47+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Apr 29, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.9.1/">
+                <p class="release__version">
+                  2.9.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2015-12-21T14:54:49+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 21, 2015
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.9.0/">
+                <p class="release__version">
+                  2.9.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2015-12-15T15:29:54+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 15, 2015
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.8.1/">
+                <p class="release__version">
+                  2.8.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2015-10-13T12:56:31+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 13, 2015
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.8.0/">
+                <p class="release__version">
+                  2.8.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2015-10-06T14:47:54+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 6, 2015
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.7.0/">
+                <p class="release__version">
+                  2.7.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2015-05-03T15:01:10+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 3, 2015
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.6.2/">
+                <p class="release__version">
+                  2.6.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2015-04-23T16:30:49+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Apr 23, 2015
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.6.1/">
+                <p class="release__version">
+                  2.6.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2015-04-23T02:27:02+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Apr 23, 2015
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.6.0/">
+                <p class="release__version">
+                  2.6.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2015-03-14T16:44:36+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Mar 14, 2015
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.5.3/">
+                <p class="release__version">
+                  2.5.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2015-02-24T16:33:48+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 24, 2015
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.5.2/">
+                <p class="release__version">
+                  2.5.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2015-02-23T22:37:38+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 23, 2015
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.5.1/">
+                <p class="release__version">
+                  2.5.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2014-12-23T17:55:57+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 23, 2014
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.5.0/">
+                <p class="release__version">
+                  2.5.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2014-12-01T23:27:49+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 1, 2014
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.4.3/">
+                <p class="release__version">
+                  2.4.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2014-10-06T09:44:38+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 6, 2014
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.4.2/">
+                <p class="release__version">
+                  2.4.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2014-10-05T17:15:39+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 5, 2014
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.4.1/">
+                <p class="release__version">
+                  2.4.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2014-09-09T16:35:04+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Sep 9, 2014
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.4.0/">
+                <p class="release__version">
+                  2.4.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2014-08-29T14:32:40+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Aug 29, 2014
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.3.0/">
+                <p class="release__version">
+                  2.3.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2014-05-16T17:56:56+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 16, 2014
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.2.1/">
+                <p class="release__version">
+                  2.2.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2014-01-23T18:26:07+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jan 23, 2014
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.2.0/">
+                <p class="release__version">
+                  2.2.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2014-01-09T19:33:23+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jan 9, 2014
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.1.0/">
+                <p class="release__version">
+                  2.1.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2013-12-05T22:51:37+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 5, 2013
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.0.1/">
+                <p class="release__version">
+                  2.0.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2013-10-24T14:33:13+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 24, 2013
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/2.0.0/">
+                <p class="release__version">
+                  2.0.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2013-09-24T18:38:53+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Sep 24, 2013
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/1.2.3/">
+                <p class="release__version">
+                  1.2.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2013-05-25T16:48:30+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 25, 2013
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/1.2.2/">
+                <p class="release__version">
+                  1.2.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2013-05-21T21:44:41+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 21, 2013
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/1.2.1/">
+                <p class="release__version">
+                  1.2.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2013-05-20T20:11:00+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 20, 2013
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/1.2.0/">
+                <p class="release__version">
+                  1.2.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2013-03-31T05:28:36+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Mar 31, 2013
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/1.1.0/">
+                <p class="release__version">
+                  1.1.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2013-01-10T07:13:35+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jan 10, 2013
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/1.0.4/">
+                <p class="release__version">
+                  1.0.4
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-12-23T07:45:06+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 23, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/1.0.3/">
+                <p class="release__version">
+                  1.0.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-12-18T09:34:40+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 18, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/1.0.2/">
+                <p class="release__version">
+                  1.0.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-12-17T18:48:24+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 17, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/1.0.1/">
+                <p class="release__version">
+                  1.0.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-12-17T18:37:36+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 17, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/1.0.0/">
+                <p class="release__version">
+                  1.0.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-12-17T14:44:01+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 17, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.14.2/">
+                <p class="release__version">
+                  0.14.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-10-27T15:08:50+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 27, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.14.1/">
+                <p class="release__version">
+                  0.14.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-10-01T17:30:04+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 1, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.14.0/">
+                <p class="release__version">
+                  0.14.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-09-02T08:50:37+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Sep 2, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.13.9/">
+                <p class="release__version">
+                  0.13.9
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-08-25T15:26:44+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Aug 25, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.13.8/">
+                <p class="release__version">
+                  0.13.8
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-08-20T15:23:45+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Aug 20, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.13.7/">
+                <p class="release__version">
+                  0.13.7
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-08-19T00:47:45+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Aug 19, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.13.6/">
+                <p class="release__version">
+                  0.13.6
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-08-06T06:46:21+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Aug 6, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.13.5/">
+                <p class="release__version">
+                  0.13.5
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-07-27T07:23:39+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 27, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.13.4/">
+                <p class="release__version">
+                  0.13.4
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-07-27T06:22:06+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 27, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.13.3/">
+                <p class="release__version">
+                  0.13.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-07-12T21:20:35+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 12, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.13.2/">
+                <p class="release__version">
+                  0.13.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-06-29T00:37:40+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jun 29, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.13.1/">
+                <p class="release__version">
+                  0.13.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-06-08T02:09:36+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jun 8, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.13.0/">
+                <p class="release__version">
+                  0.13.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-05-30T00:54:17+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 30, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.12.1/">
+                <p class="release__version">
+                  0.12.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-05-08T05:21:54+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 8, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.12.01/">
+                <p class="release__version">
+                  0.12.01
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-05-08T05:21:23+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 8, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.12.0/">
+                <p class="release__version">
+                  0.12.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-05-02T23:17:44+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 2, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.11.2/">
+                <p class="release__version">
+                  0.11.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-04-23T02:29:31+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Apr 23, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.11.1/">
+                <p class="release__version">
+                  0.11.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-03-31T03:47:51+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Mar 31, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.10.8/">
+                <p class="release__version">
+                  0.10.8
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-03-09T16:59:49+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Mar 9, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.10.7/">
+                <p class="release__version">
+                  0.10.7
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-03-08T00:50:55+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Mar 8, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.10.6/">
+                <p class="release__version">
+                  0.10.6
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-02-26T04:17:53+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 26, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.10.4/">
+                <p class="release__version">
+                  0.10.4
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-02-20T21:21:30+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 20, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.10.3/">
+                <p class="release__version">
+                  0.10.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-02-20T19:10:56+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 20, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.10.2/">
+                <p class="release__version">
+                  0.10.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-02-15T08:48:52+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 15, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.10.1/">
+                <p class="release__version">
+                  0.10.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-01-23T07:22:51+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jan 23, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.10.0/">
+                <p class="release__version">
+                  0.10.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-01-22T04:07:22+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jan 22, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.9.3/">
+                <p class="release__version">
+                  0.9.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-01-19T15:51:31+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jan 19, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.9.2/">
+                <p class="release__version">
+                  0.9.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-01-19T02:39:49+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jan 19, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.9.1/">
+                <p class="release__version">
+                  0.9.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-01-06T06:11:01+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jan 6, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.9.0/">
+                <p class="release__version">
+                  0.9.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-12-28T09:51:35+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 28, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.8.9/">
+                <p class="release__version">
+                  0.8.9
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-12-28T09:26:32+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 28, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.8.8/">
+                <p class="release__version">
+                  0.8.8
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-12-28T08:53:07+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 28, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.8.7/">
+                <p class="release__version">
+                  0.8.7
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-12-24T08:18:54+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 24, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.8.6/">
+                <p class="release__version">
+                  0.8.6
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-12-19T00:18:28+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 19, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.8.5/">
+                <p class="release__version">
+                  0.8.5
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-12-14T15:43:20+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 14, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.8.4/">
+                <p class="release__version">
+                  0.8.4
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-12-11T16:40:27+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 11, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.8.3/">
+                <p class="release__version">
+                  0.8.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-11-27T15:44:51+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Nov 27, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.8.2/">
+                <p class="release__version">
+                  0.8.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-11-19T21:28:30+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Nov 19, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.8.1/">
+                <p class="release__version">
+                  0.8.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-11-15T15:00:30+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Nov 15, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.8.0/">
+                <p class="release__version">
+                  0.8.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-11-13T05:52:07+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Nov 13, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.7.6/">
+                <p class="release__version">
+                  0.7.6
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-11-07T19:19:30+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Nov 7, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.7.5/">
+                <p class="release__version">
+                  0.7.5
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-11-05T03:32:36+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Nov 5, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.7.4/">
+                <p class="release__version">
+                  0.7.4
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-10-26T22:36:24+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 26, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.7.3/">
+                <p class="release__version">
+                  0.7.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-10-23T21:04:12+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 23, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.7.2/">
+                <p class="release__version">
+                  0.7.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-10-23T19:40:35+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 23, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.7.1/">
+                <p class="release__version">
+                  0.7.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-10-23T19:19:21+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 23, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.7.0/">
+                <p class="release__version">
+                  0.7.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-10-23T01:33:23+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 23, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.6.6/">
+                <p class="release__version">
+                  0.6.6
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-10-19T07:39:55+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 19, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.6.5/">
+                <p class="release__version">
+                  0.6.5
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-10-19T05:30:59+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 19, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.6.4/">
+                <p class="release__version">
+                  0.6.4
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-10-14T02:23:30+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 14, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.6.3/">
+                <p class="release__version">
+                  0.6.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-10-14T01:35:11+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 14, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.6.2/">
+                <p class="release__version">
+                  0.6.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-10-09T11:12:44+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 9, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.6.1/">
+                <p class="release__version">
+                  0.6.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-08-20T22:25:36+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Aug 20, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.6.0/">
+                <p class="release__version">
+                  0.6.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-08-17T08:20:17+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Aug 17, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.5.1/">
+                <p class="release__version">
+                  0.5.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-07-24T03:01:44+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.5.0/">
+                <p class="release__version">
+                  0.5.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-06-22T02:44:38+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jun 22, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.4.1/">
+                <p class="release__version">
+                  0.4.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-05-22T18:16:11+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 22, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.4.0/">
+                <p class="release__version">
+                  0.4.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-05-15T03:58:42+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 15, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.3.4/">
+                <p class="release__version">
+                  0.3.4
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-05-14T18:30:43+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 14, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.3.3/">
+                <p class="release__version">
+                  0.3.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-05-12T08:03:23+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 12, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.3.2/">
+                <p class="release__version">
+                  0.3.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-04-15T21:30:50+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Apr 15, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.3.1/">
+                <p class="release__version">
+                  0.3.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-04-01T18:55:02+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Apr 1, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.3.0/">
+                <p class="release__version">
+                  0.3.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-02-25T13:58:37+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 25, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.2.4/">
+                <p class="release__version">
+                  0.2.4
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-02-19T06:01:04+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 19, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.2.3/">
+                <p class="release__version">
+                  0.2.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-02-15T14:47:23+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 15, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.2.2/">
+                <p class="release__version">
+                  0.2.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-02-14T17:58:39+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 14, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.2.1/">
+                <p class="release__version">
+                  0.2.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-02-14T15:38:06+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 14, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.2.0/">
+                <p class="release__version">
+                  0.2.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-02-14T06:18:07+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 14, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release release--oldest">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.8c3a6fe9.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/requests/0.0.1/">
+                <p class="release__version">
+                  0.0.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2011-02-13T18:51:23+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 13, 2011
+</time>
+                </p>
+              </a>
+            </div>
+            
+          </div>
+        </div>
+
+        
+          
+          <div id="files" data-target="project-tabs.content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="files-tab mobile-files-tab" tabindex="-1">
+            <h2 class="page-title">Download files</h2>
+            <p>Download the file for your platform. If you're not sure which to choose, learn more about <a href="https://packaging.python.org/installing/" title="External link" target="_blank" rel="noopener">installing packages</a>.</p>
+
+            <table class="table table--downloads">
+              <caption class="sr-only">Files for requests, version 2.23.0</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Filename, size</th>
+                  <th scope="col">File type</th>
+                  <th scope="col">Python version</th>
+                  <th scope="col">Upload date</th>
+                  <th scope="col" class="table__align-right">Hashes</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr>
+                  <th scope="row">
+                    <span class="table__mobile-label">Filename, size</span>
+                    <a href="https://files.pythonhosted.org/packages/1a/70/1935c770cb3be6e3a8b78ced23d7e0f3b187f5cbfab4749523ed65d7c9b1/requests-2.23.0-py2.py3-none-any.whl">
+                      requests-2.23.0-py2.py3-none-any.whl
+                    </a>
+                     (58.4 kB)
+                  </th>
+                  <td>
+                    <span class="table__mobile-label">File type</span>
+                    Wheel
+                  </td>
+                  <td>
+                    <span class="table__mobile-label">Python version</span>
+                    
+                      py2.py3
+                    
+                  </td>
+                  <td>
+                    <span class="table__mobile-label">Upload date</span>
+                    <time datetime="2020-02-19T18:50:59+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 19, 2020
+</time>
+                  </td>
+                  <td class="table__align-right">
+                    <span class="table__mobile-label table__mobile-label--hashes">Hashes</span>
+                    <a href="#copy-hash-modal-2fd595b6-7274-41b6-9003-48302a040d79" class="button button--small button--primary">
+                      View
+                    </a>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <th scope="row">
+                    <span class="table__mobile-label">Filename, size</span>
+                    <a href="https://files.pythonhosted.org/packages/f5/4f/280162d4bd4d8aad241a21aecff7a6e46891b905a4341e7ab549ebaf7915/requests-2.23.0.tar.gz">
+                      requests-2.23.0.tar.gz
+                    </a>
+                     (114.3 kB)
+                  </th>
+                  <td>
+                    <span class="table__mobile-label">File type</span>
+                    Source
+                  </td>
+                  <td>
+                    <span class="table__mobile-label">Python version</span>
+                    
+                      None
+                    
+                  </td>
+                  <td>
+                    <span class="table__mobile-label">Upload date</span>
+                    <time datetime="2020-02-19T18:51:01+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 19, 2020
+</time>
+                  </td>
+                  <td class="table__align-right">
+                    <span class="table__mobile-label table__mobile-label--hashes">Hashes</span>
+                    <a href="#copy-hash-modal-8e62e3eb-177f-49bf-a588-a9b897731ff0" class="button button--small button--primary">
+                      View
+                    </a>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+
+          
+          <div id="copy-hash-modal-2fd595b6-7274-41b6-9003-48302a040d79" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/reference/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for requests-2.23.0-py2.py3-none-any.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for requests-2.23.0-py2.py3-none-any.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>43999036bfa82904b6af1d99e4882b560e5e2c68e5c4b0aa03b655f3d7d73fee</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="43999036bfa82904b6af1d99e4882b560e5e2c68e5c4b0aa03b655f3d7d73fee">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>71e867ff3d34b2b6a75e0f74f833cafe</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="71e867ff3d34b2b6a75e0f74f833cafe">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2-256</th>
+            <td><code>1a701935c770cb3be6e3a8b78ced23d7e0f3b187f5cbfab4749523ed65d7c9b1</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="1a701935c770cb3be6e3a8b78ced23d7e0f3b187f5cbfab4749523ed65d7c9b1">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-8e62e3eb-177f-49bf-a588-a9b897731ff0" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/reference/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for requests-2.23.0.tar.gz
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for requests-2.23.0.tar.gz</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>b3f43d496c6daba4493e7c431722aeb7dbc6288f52a6e04e7b6023b0247817e6</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="b3f43d496c6daba4493e7c431722aeb7dbc6288f52a6e04e7b6023b0247817e6">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>abfdc28db1065bbd0bc32592ac9d27a6</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="abfdc28db1065bbd0bc32592ac9d27a6">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2-256</th>
+            <td><code>f54f280162d4bd4d8aad241a21aecff7a6e46891b905a4341e7ab549ebaf7915</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="f54f280162d4bd4d8aad241a21aecff7a6e46891b905a4341e7ab549ebaf7915">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__logo">
+        <img src="/static/images/white-cube.8c3a6fe9.svg" alt="" class="-js-white-cube">
+      </div>
+
+      <div class="footer__menus">
+        <div class="footer__menu">
+          <h2>Help</h2>
+          <nav aria-label="Help navigation">
+            <ul>
+              <li><a href="https://packaging.python.org/installing/" title="External link" target="_blank" rel="noopener">Installing packages</a></li>
+              <li><a href="https://packaging.python.org/tutorials/packaging-projects/" title="External link" target="_blank" rel="noopener">Uploading packages</a></li>
+              <li><a href="https://packaging.python.org/" title="External link" target="_blank" rel="noopener">User guide</a></li>
+              <li><a href="/help/">FAQs</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__menu">
+          <h2>About PyPI</h2>
+          <nav aria-label="About PyPI navigation">
+            <ul>
+              <li><a href="https://twitter.com/PyPI" title="External link" target="_blank" rel="noopener">PyPI on Twitter</a></li>
+              <li><a href="https://dtdg.co/pypi" title="External link" target="_blank" rel="noopener">Infrastructure dashboard</a></li>
+              <li><a href="https://www.python.org/dev/peps/pep-0541/" title="External link" target="_blank" rel="noopener">Package index name retention</a></li>
+              <li><a href="/sponsors/">Our sponsors</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__menu">
+          <h2>Contributing to PyPI</h2>
+          <nav aria-label="How to contribute navigation">
+            <ul>
+              <li><a href="/help/#feedback">Bugs and feedback</a></li>
+              <li><a href="https://github.com/pypa/warehouse" title="External link" target="_blank" rel="noopener">Contribute on GitHub</a></li>
+              <li><a href="https://hosted.weblate.org/projects/pypa/warehouse/" title="External link" target="_blank" rel="noopener">Translate PyPI</a></li>
+              <li><a href="https://github.com/pypa/warehouse/graphs/contributors" title="External link" target="_blank" rel="noopener">Development credits</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__menu">
+          <h2>Using PyPI</h2>
+          <nav aria-label="Using PyPI navigation">
+            <ul>
+              <li><a href="https://www.pypa.io/en/latest/code-of-conduct/" title="External link" target="_blank" rel="noopener">Code of conduct</a></li>
+              <li><a href="/security/">Report security issue</a></li>
+              <li><a href="https://www.python.org/privacy/" title="External link" target="_blank" rel="noopener">Privacy policy</a></li>
+              <li><a href="/policy/terms-of-use/">Terms of use</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <hr class="footer__divider">
+
+      <div class="footer__text">
+        
+        <p>Status: <a href="https://status.python.org/" title="External link" target="_blank" rel="noopener">
+          <span data-statuspage-domain="https://2p66nmmycsj3.statuspage.io">all systems operational</span></a>
+        </p>
+        
+        <p>
+          Developed and maintained by the Python community, for the Python community.
+          <br>
+          <a href="https://donate.pypi.org">Donate today!</a>
+        </p>
+        <p>© 2020 <a href="https://www.python.org/psf/" title="External link" target="_blank" rel="noopener">Python Software Foundation</a><br>
+          <a href="/sitemap/">Site map</a>
+        </p>
+      </div>
+
+      <div class="centered hide-on-desktop">
+        <button type="button" class="button button--switch-to-desktop hidden" data-target="viewport-toggle.switchToDesktop" data-action="viewport-toggle#switchToDesktop">
+          Switch to desktop version
+        </button>
+      </div>
+    </footer>
+
+
+    <div class="language-switcher">
+      <form action="/locale/">
+        <ul>
+          
+          <li>
+            <button class="language-switcher__selected" name="locale_id" value="en" type="submit">English</button>
+          </li>
+          
+          <li>
+            <button class="" name="locale_id" value="es" type="submit">español</button>
+          </li>
+          
+          <li>
+            <button class="" name="locale_id" value="fr" type="submit">français</button>
+          </li>
+          
+          <li>
+            <button class="" name="locale_id" value="ja" type="submit">日本語</button>
+          </li>
+          
+          <li>
+            <button class="" name="locale_id" value="pt_BR" type="submit">Português Brasileiro</button>
+          </li>
+          
+          <li>
+            <button class="" name="locale_id" value="uk" type="submit">Українська</button>
+          </li>
+          
+          <li>
+            <button class="" name="locale_id" value="el" type="submit">Ελληνικά</button>
+          </li>
+          
+          <li>
+            <button class="" name="locale_id" value="de" type="submit">Deutsch</button>
+          </li>
+          
+          <li>
+            <button class="" name="locale_id" value="zh_Hans" type="submit">简体中文</button>
+          </li>
+          
+          <li>
+            <button class="" name="locale_id" value="ru" type="submit">Русский</button>
+          </li>
+          
+        </ul>
+      </form>
+    </div>
+
+
+    
+
+<div class="sponsors">
+  <p class="sponsors__title">Supported by</p>
+  
+    
+      <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.pingdom.com/">
+        <img class="sponsors__image" alt="Pingdom" src="/static/images/sponsors/white/pingdom.277dedc4.png">
+        <span class="sponsors__name">Pingdom</span>
+        <span class="sponsors__service">Monitoring</span>
+      </a>
+    
+  
+    
+      <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://cloud.google.com/">
+        <img class="sponsors__image" alt="Google" src="/static/images/sponsors/white/google.32d8a2de.png">
+        <span class="sponsors__name">Google</span>
+        <span class="sponsors__service">Object Storage and Download Analytics</span>
+      </a>
+    
+  
+    
+      <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://getsentry.com/for/python">
+        <img class="sponsors__image" alt="Sentry" src="/static/images/sponsors/white/sentry.55260f07.png">
+        <span class="sponsors__name">Sentry</span>
+        <span class="sponsors__service">Error logging</span>
+      </a>
+    
+  
+    
+      <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://aws.amazon.com/">
+        <img class="sponsors__image" alt="AWS" src="/static/images/sponsors/white/aws.9f9c77f7.png">
+        <span class="sponsors__name">AWS</span>
+        <span class="sponsors__service">Cloud computing</span>
+      </a>
+    
+  
+    
+      <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.datadoghq.com/">
+        <img class="sponsors__image" alt="DataDog" src="/static/images/sponsors/white/datadog.d16bd2ef.png">
+        <span class="sponsors__name">DataDog</span>
+        <span class="sponsors__service">Monitoring</span>
+      </a>
+    
+  
+    
+      <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.fastly.com/">
+        <img class="sponsors__image" alt="Fastly" src="/static/images/sponsors/white/fastly.dc317a48.png">
+        <span class="sponsors__name">Fastly</span>
+        <span class="sponsors__service">CDN</span>
+      </a>
+    
+  
+    
+      <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.digicert.com/">
+        <img class="sponsors__image" alt="DigiCert" src="/static/images/sponsors/white/digicert.7d655136.png">
+        <span class="sponsors__name">DigiCert</span>
+        <span class="sponsors__service">EV certificate</span>
+      </a>
+    
+  
+    
+      <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://statuspage.io">
+        <img class="sponsors__image" alt="StatusPage" src="/static/images/sponsors/white/statuspage.62f130cc.png">
+        <span class="sponsors__name">StatusPage</span>
+        <span class="sponsors__service">Status page</span>
+      </a>
+    
+  
+</div>
+
+    
+  </body>
+
+</html>

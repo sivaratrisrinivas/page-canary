@@ -1,0 +1,455 @@
+{
+ "configs": [
+  {
+   "key": "hn-2021",
+   "url": "https://news.ycombinator.com/",
+   "fields": [
+    {
+     "name": "title",
+     "selector": "a.storylink",
+     "kind": "text",
+     "required": true
+    },
+    {
+     "name": "link",
+     "selector": "a.storylink",
+     "kind": "url",
+     "attr": "href",
+     "required": true
+    },
+    {
+     "name": "points",
+     "selector": ".score",
+     "kind": "int",
+     "required": true
+    },
+    {
+     "name": "age",
+     "selector": ".age a",
+     "kind": "date",
+     "required": true
+    }
+   ]
+  },
+  {
+   "key": "hn-2022",
+   "url": "https://news.ycombinator.com/",
+   "fields": [
+    {
+     "name": "title",
+     "selector": ".titleline > a",
+     "kind": "text",
+     "required": true
+    },
+    {
+     "name": "link",
+     "selector": ".titleline > a",
+     "kind": "url",
+     "attr": "href",
+     "required": true
+    },
+    {
+     "name": "points",
+     "selector": ".score",
+     "kind": "int",
+     "required": true
+    },
+    {
+     "name": "age",
+     "selector": ".age a",
+     "kind": "date",
+     "required": true
+    }
+   ]
+  },
+  {
+   "key": "wiki-2022",
+   "url": "https://en.wikipedia.org/wiki/Rust_(programming_language)",
+   "fields": [
+    {
+     "name": "heading",
+     "selector": "#firstHeading",
+     "kind": "text",
+     "required": true
+    },
+    {
+     "name": "infobox_label",
+     "selector": "table.infobox th.infobox-label",
+     "kind": "text",
+     "required": true
+    },
+    {
+     "name": "toc",
+     "selector": "#toc .toctext",
+     "kind": "text",
+     "required": true
+    }
+   ]
+  },
+  {
+   "key": "wiki-2023",
+   "url": "https://en.wikipedia.org/wiki/Rust_(programming_language)",
+   "fields": [
+    {
+     "name": "heading",
+     "selector": "#firstHeading",
+     "kind": "text",
+     "required": true
+    },
+    {
+     "name": "infobox_label",
+     "selector": "table.infobox th.infobox-label",
+     "kind": "text",
+     "required": true
+    },
+    {
+     "name": "toc",
+     "selector": ".vector-toc-text",
+     "kind": "text",
+     "required": true
+    }
+   ]
+  },
+  {
+   "key": "gh-2022",
+   "url": "https://github.com/trending",
+   "fields": [
+    {
+     "name": "repo",
+     "selector": "article.Box-row h1 a",
+     "kind": "text",
+     "required": true
+    },
+    {
+     "name": "stars",
+     "selector": "article.Box-row a[href$='/stargazers']",
+     "kind": "int",
+     "required": true
+    },
+    {
+     "name": "about",
+     "selector": "article.Box-row p",
+     "kind": "text",
+     "required": false
+    }
+   ]
+  },
+  {
+   "key": "gh-2024",
+   "url": "https://github.com/trending",
+   "fields": [
+    {
+     "name": "repo",
+     "selector": "article.Box-row h2 a",
+     "kind": "text",
+     "required": true
+    },
+    {
+     "name": "stars",
+     "selector": "article.Box-row a[href$='/stargazers']",
+     "kind": "int",
+     "required": true
+    },
+    {
+     "name": "about",
+     "selector": "article.Box-row p",
+     "kind": "text",
+     "required": false
+    }
+   ]
+  },
+  {
+   "key": "py-downloads",
+   "url": "https://www.python.org/downloads/",
+   "fields": [
+    {
+     "name": "release",
+     "selector": ".release-number a",
+     "kind": "text",
+     "required": true
+    },
+    {
+     "name": "link",
+     "selector": ".release-number a",
+     "kind": "url",
+     "attr": "href",
+     "required": true
+    },
+    {
+     "name": "date",
+     "selector": ".release-date",
+     "kind": "date",
+     "required": true
+    }
+   ]
+  },
+  {
+   "key": "lobsters-2021",
+   "url": "https://lobste.rs/",
+   "fields": [
+    {
+     "name": "title",
+     "selector": ".link a.u-url",
+     "kind": "text",
+     "required": true
+    },
+    {
+     "name": "link",
+     "selector": ".link a.u-url",
+     "kind": "url",
+     "attr": "href",
+     "required": true
+    },
+    {
+     "name": "score",
+     "selector": ".voters .score",
+     "kind": "int",
+     "required": true
+    }
+   ]
+  },
+  {
+   "key": "lobsters-2025",
+   "url": "https://lobste.rs/",
+   "fields": [
+    {
+     "name": "title",
+     "selector": ".link a.u-url",
+     "kind": "text",
+     "required": true
+    },
+    {
+     "name": "link",
+     "selector": ".link a.u-url",
+     "kind": "url",
+     "attr": "href",
+     "required": true
+    },
+    {
+     "name": "score",
+     "selector": ".upvoter",
+     "kind": "int",
+     "required": true
+    },
+    {
+     "name": "age",
+     "selector": ".byline time",
+     "kind": "date",
+     "required": true
+    }
+   ]
+  },
+  {
+   "key": "pypi-requests",
+   "url": "https://pypi.org/project/requests/",
+   "fields": [
+    {
+     "name": "name",
+     "selector": "h1.package-header__name",
+     "kind": "text",
+     "required": true
+    },
+    {
+     "name": "released",
+     "selector": ".package-header__date time",
+     "kind": "date",
+     "required": true
+    },
+    {
+     "name": "summary",
+     "selector": "p.package-description__summary",
+     "kind": "text",
+     "required": true
+    }
+   ]
+  },
+  {
+   "key": "rust-blog",
+   "url": "https://blog.rust-lang.org/",
+   "fields": [
+    {
+     "name": "post",
+     "selector": "table.post-list td.bn a",
+     "kind": "text",
+     "required": true
+    },
+    {
+     "name": "link",
+     "selector": "table.post-list td.bn a",
+     "kind": "url",
+     "attr": "href",
+     "required": true
+    },
+    {
+     "name": "date",
+     "selector": "table.post-list td.tr",
+     "kind": "date",
+     "required": true
+    }
+   ]
+  },
+  {
+   "key": "docsrs-releases",
+   "url": "https://docs.rs/releases",
+   "fields": [
+    {
+     "name": "crate",
+     "selector": ".release .name",
+     "kind": "text",
+     "required": true
+    },
+    {
+     "name": "age",
+     "selector": ".release .date",
+     "kind": "date",
+     "required": true
+    },
+    {
+     "name": "about",
+     "selector": ".release .description",
+     "kind": "text",
+     "required": false
+    }
+   ]
+  }
+ ],
+ "real": [
+  {
+   "config": "hn-2021",
+   "before": "real/hn/20210601.html",
+   "after": "real/hn/20210602.html",
+   "label": "benign",
+   "note": "next day, new stories"
+  },
+  {
+   "config": "hn-2021",
+   "before": "real/hn/20210601.html",
+   "after": "real/hn/20221201.html",
+   "label": "break",
+   "note": "HN replaced a.storylink with span.titleline > a; titles still on the page"
+  },
+  {
+   "config": "hn-2022",
+   "before": "real/hn/20221201.html",
+   "after": "real/hn/20260901.html",
+   "label": "benign",
+   "note": "almost four years later, same markup"
+  },
+  {
+   "config": "wiki-2022",
+   "before": "real/wiki-rust/20220601.html",
+   "after": "real/wiki-rust/20220701.html",
+   "label": "benign",
+   "note": "article edited"
+  },
+  {
+   "config": "wiki-2022",
+   "before": "real/wiki-rust/20220701.html",
+   "after": "real/wiki-rust/20230601.html",
+   "label": "break",
+   "note": "Vector 2022 skin: #toc replaced by a sidebar TOC (.vector-toc-text)"
+  },
+  {
+   "config": "gh-2022",
+   "before": "real/gh-trending/20200601.html",
+   "after": "real/gh-trending/20220601.html",
+   "label": "benign",
+   "note": "new repos, extra classes; same h1 a"
+  },
+  {
+   "config": "gh-2022",
+   "before": "real/gh-trending/20220601.html",
+   "after": "real/gh-trending/20240601.html",
+   "label": "break",
+   "note": "repo names moved from h1 to h2"
+  },
+  {
+   "config": "py-downloads",
+   "before": "real/py-downloads/20210601.html",
+   "after": "real/py-downloads/20240601.html",
+   "label": "benign",
+   "note": "three years of releases"
+  },
+  {
+   "config": "py-downloads",
+   "before": "real/py-downloads/20240601.html",
+   "after": "real/py-downloads/20250601.html",
+   "label": "benign",
+   "note": "one year of releases"
+  },
+  {
+   "config": "lobsters-2021",
+   "before": "real/lobsters/20210601.html",
+   "after": "real/lobsters/20210602.html",
+   "label": "benign",
+   "note": "next day"
+  },
+  {
+   "config": "lobsters-2021",
+   "before": "real/lobsters/20210601.html",
+   "after": "real/lobsters/20250601.html",
+   "label": "break",
+   "note": "vote count moved from .voters .score to .upvoter"
+  },
+  {
+   "config": "pypi-requests",
+   "before": "real/pypi-requests/20200601.html",
+   "after": "real/pypi-requests/20250601.html",
+   "label": "benign",
+   "note": "new version, same page template"
+  },
+  {
+   "config": "rust-blog",
+   "before": "real/rust-blog/20240601.html",
+   "after": "real/rust-blog/20250601.html",
+   "label": "benign",
+   "note": "blog moved to a new generator; links became absolute, table kept"
+  },
+  {
+   "config": "docsrs-releases",
+   "before": "real/docsrs-releases/20230601.html",
+   "after": "real/docsrs-releases/20250601.html",
+   "label": "benign",
+   "note": "two years of crates"
+  }
+ ],
+ "synthetic_bases": [
+  {
+   "config": "hn-2022",
+   "file": "real/hn/20260901.html"
+  },
+  {
+   "config": "wiki-2023",
+   "file": "real/wiki-rust/20230601.html"
+  },
+  {
+   "config": "gh-2024",
+   "file": "real/gh-trending/20240601.html"
+  },
+  {
+   "config": "py-downloads",
+   "file": "real/py-downloads/20250601.html"
+  },
+  {
+   "config": "lobsters-2025",
+   "file": "real/lobsters/20250601.html"
+  },
+  {
+   "config": "pypi-requests",
+   "file": "real/pypi-requests/20250601.html"
+  },
+  {
+   "config": "rust-blog",
+   "file": "real/rust-blog/20250601.html"
+  },
+  {
+   "config": "docsrs-releases",
+   "file": "real/docsrs-releases/20250601.html"
+  }
+ ],
+ "seeds": [
+  1,
+  2,
+  3
+ ]
+}

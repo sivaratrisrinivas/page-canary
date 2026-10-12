@@ -1,0 +1,20 @@
+[package]
+name = "page-canary"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+license = "MIT"
+description = "Polite page re-checker that flags layout and schema drift before extractors break"
+
+[dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "time", "sync", "fs"] }
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "gzip", "brotli", "json"] }
+axum = "0.7"
+kuchikiki = "0.8"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+texting_robots = "0.2"
+url = "2"
+regex = "1"
+anyhow = "1"
+chrono = { version = "0.4", default-features = false, features = ["clock", "serde"] }

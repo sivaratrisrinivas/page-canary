@@ -1,0 +1,186 @@
+[
+ {
+  "key": "hn-2022",
+  "url": "https://news.ycombinator.com/",
+  "fields": [
+   {
+    "name": "title",
+    "selector": ".titleline > a",
+    "kind": "text",
+    "required": true
+   },
+   {
+    "name": "link",
+    "selector": ".titleline > a",
+    "kind": "url",
+    "attr": "href",
+    "required": true
+   },
+   {
+    "name": "points",
+    "selector": ".score",
+    "kind": "int",
+    "required": true
+   },
+   {
+    "name": "age",
+    "selector": ".age a",
+    "kind": "date",
+    "required": true
+   }
+  ]
+ },
+ {
+  "key": "wiki-2023",
+  "url": "https://en.wikipedia.org/wiki/Rust_(programming_language)",
+  "fields": [
+   {
+    "name": "heading",
+    "selector": "#firstHeading",
+    "kind": "text",
+    "required": true
+   },
+   {
+    "name": "infobox_label",
+    "selector": "table.infobox th.infobox-label",
+    "kind": "text",
+    "required": true
+   },
+   {
+    "name": "toc",
+    "selector": ".vector-toc-text",
+    "kind": "text",
+    "required": true
+   }
+  ]
+ },
+ {
+  "key": "py-downloads",
+  "url": "https://www.python.org/downloads/",
+  "fields": [
+   {
+    "name": "release",
+    "selector": ".release-number a",
+    "kind": "text",
+    "required": true
+   },
+   {
+    "name": "link",
+    "selector": ".release-number a",
+    "kind": "url",
+    "attr": "href",
+    "required": true
+   },
+   {
+    "name": "date",
+    "selector": ".release-date",
+    "kind": "date",
+    "required": true
+   }
+  ]
+ },
+ {
+  "key": "lobsters-2025",
+  "url": "https://lobste.rs/",
+  "fields": [
+   {
+    "name": "title",
+    "selector": ".link a.u-url",
+    "kind": "text",
+    "required": true
+   },
+   {
+    "name": "link",
+    "selector": ".link a.u-url",
+    "kind": "url",
+    "attr": "href",
+    "required": true
+   },
+   {
+    "name": "score",
+    "selector": ".upvoter",
+    "kind": "int",
+    "required": true
+   },
+   {
+    "name": "age",
+    "selector": ".byline time",
+    "kind": "date",
+    "required": true
+   }
+  ]
+ },
+ {
+  "key": "pypi-requests",
+  "url": "https://pypi.org/project/requests/",
+  "fields": [
+   {
+    "name": "name",
+    "selector": "h1.package-header__name",
+    "kind": "text",
+    "required": true
+   },
+   {
+    "name": "released",
+    "selector": ".package-header__date time",
+    "kind": "date",
+    "required": true
+   },
+   {
+    "name": "summary",
+    "selector": "p.package-description__summary",
+    "kind": "text",
+    "required": true
+   }
+  ]
+ },
+ {
+  "key": "rust-blog",
+  "url": "https://blog.rust-lang.org/",
+  "fields": [
+   {
+    "name": "post",
+    "selector": "table.post-list td.bn a",
+    "kind": "text",
+    "required": true
+   },
+   {
+    "name": "link",
+    "selector": "table.post-list td.bn a",
+    "kind": "url",
+    "attr": "href",
+    "required": true
+   },
+   {
+    "name": "date",
+    "selector": "table.post-list td.tr",
+    "kind": "date",
+    "required": true
+   }
+  ]
+ },
+ {
+  "key": "docsrs-releases",
+  "url": "https://docs.rs/releases",
+  "fields": [
+   {
+    "name": "crate",
+    "selector": ".release .name",
+    "kind": "text",
+    "required": true
+   },
+   {
+    "name": "age",
+    "selector": ".release .date",
+    "kind": "date",
+    "required": true
+   },
+   {
+    "name": "about",
+    "selector": ".release .description",
+    "kind": "text",
+    "required": false
+   }
+  ]
+ }
+]

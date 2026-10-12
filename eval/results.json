@@ -1,0 +1,3784 @@
+{
+  "thresholds": {
+    "shape": 0.5,
+    "anchor": 0.34,
+    "count_drop": 0.5,
+    "valid": 0.7
+  },
+  "cases": [
+    {
+      "set": "real",
+      "config": "hn-2021",
+      "before": "real/hn/20210601.html",
+      "after": "real/hn/20210602.html",
+      "mutation": "real",
+      "label_break": false,
+      "note": "next day, new stories",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "real",
+      "config": "hn-2021",
+      "before": "real/hn/20210601.html",
+      "after": "real/hn/20221201.html",
+      "mutation": "real",
+      "label_break": true,
+      "note": "HN replaced a.storylink with span.titleline > a; titles still on the page",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.5645161290322581,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "title",
+            "detail": "`a.storylink` matched 30 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "link",
+            "detail": "`a.storylink` matched 30 before, 0 now"
+          },
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "points",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          }
+        ]
+      }
+    },
+    {
+      "set": "real",
+      "config": "hn-2022",
+      "before": "real/hn/20221201.html",
+      "after": "real/hn/20260901.html",
+      "mutation": "real",
+      "label_break": false,
+      "note": "almost four years later, same markup",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 0.7241379310344828,
+        "signals": []
+      }
+    },
+    {
+      "set": "real",
+      "config": "wiki-2022",
+      "before": "real/wiki-rust/20220601.html",
+      "after": "real/wiki-rust/20220701.html",
+      "mutation": "real",
+      "label_break": false,
+      "note": "article edited",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 0.667060212514758,
+        "signals": []
+      }
+    },
+    {
+      "set": "real",
+      "config": "wiki-2022",
+      "before": "real/wiki-rust/20220701.html",
+      "after": "real/wiki-rust/20230601.html",
+      "mutation": "real",
+      "label_break": true,
+      "note": "Vector 2022 skin: #toc replaced by a sidebar TOC (.vector-toc-text)",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.44103547459252157,
+        "signals": [
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "heading",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "toc",
+            "detail": "`#toc .toctext` matched 38 before, 0 now"
+          },
+          {
+            "level": "Warn",
+            "kind": "layout_changed",
+            "field": null,
+            "detail": "DOM shape similarity 0.44 < 0.50"
+          }
+        ]
+      }
+    },
+    {
+      "set": "real",
+      "config": "gh-2022",
+      "before": "real/gh-trending/20200601.html",
+      "after": "real/gh-trending/20220601.html",
+      "mutation": "real",
+      "label_break": false,
+      "note": "new repos, extra classes; same h1 a",
+      "report": {
+        "verdict": "Warn",
+        "shape_similarity": 0.350597609561753,
+        "signals": [
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "stars",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "about",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "layout_changed",
+            "field": null,
+            "detail": "DOM shape similarity 0.35 < 0.50"
+          }
+        ]
+      }
+    },
+    {
+      "set": "real",
+      "config": "gh-2022",
+      "before": "real/gh-trending/20220601.html",
+      "after": "real/gh-trending/20240601.html",
+      "mutation": "real",
+      "label_break": true,
+      "note": "repo names moved from h1 to h2",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.17058823529411765,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "repo",
+            "detail": "`article.Box-row h1 a` matched 25 before, 0 now"
+          },
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "stars",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "layout_changed",
+            "field": null,
+            "detail": "DOM shape similarity 0.17 < 0.50"
+          }
+        ]
+      }
+    },
+    {
+      "set": "real",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20210601.html",
+      "after": "real/py-downloads/20240601.html",
+      "mutation": "real",
+      "label_break": false,
+      "note": "three years of releases",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 0.9216300940438872,
+        "signals": []
+      }
+    },
+    {
+      "set": "real",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20240601.html",
+      "after": "real/py-downloads/20250601.html",
+      "mutation": "real",
+      "label_break": false,
+      "note": "one year of releases",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 0.9581993569131833,
+        "signals": []
+      }
+    },
+    {
+      "set": "real",
+      "config": "lobsters-2021",
+      "before": "real/lobsters/20210601.html",
+      "after": "real/lobsters/20210602.html",
+      "mutation": "real",
+      "label_break": false,
+      "note": "next day",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "real",
+      "config": "lobsters-2021",
+      "before": "real/lobsters/20210601.html",
+      "after": "real/lobsters/20250601.html",
+      "mutation": "real",
+      "label_break": true,
+      "note": "vote count moved from .voters .score to .upvoter",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.44594594594594594,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "score",
+            "detail": "`.voters .score` matched 25 before, 0 now"
+          },
+          {
+            "level": "Warn",
+            "kind": "layout_changed",
+            "field": null,
+            "detail": "DOM shape similarity 0.45 < 0.50"
+          }
+        ]
+      }
+    },
+    {
+      "set": "real",
+      "config": "pypi-requests",
+      "before": "real/pypi-requests/20200601.html",
+      "after": "real/pypi-requests/20250601.html",
+      "mutation": "real",
+      "label_break": false,
+      "note": "new version, same page template",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 0.5457413249211357,
+        "signals": []
+      }
+    },
+    {
+      "set": "real",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20240601.html",
+      "after": "real/rust-blog/20250601.html",
+      "mutation": "real",
+      "label_break": false,
+      "note": "blog moved to a new generator; links became absolute, table kept",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 0.7346938775510204,
+        "signals": []
+      }
+    },
+    {
+      "set": "real",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20230601.html",
+      "after": "real/docsrs-releases/20250601.html",
+      "mutation": "real",
+      "label_break": false,
+      "note": "two years of crates",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 0.7407407407407407,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "class_rename#1",
+      "mutation": "class_rename",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.8518518518518519,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "title",
+            "detail": "`.titleline > a` matched 30 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "link",
+            "detail": "`.titleline > a` matched 30 before, 0 now"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "remove_field#1",
+      "mutation": "remove_field",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.98,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "title",
+            "detail": "`.titleline > a` matched 30 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "link",
+            "detail": "`.titleline > a` matched 30 before, 0 now"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "tag_swap#1",
+      "mutation": "tag_swap",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.9607843137254902,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "title",
+            "detail": "`.titleline > a` matched 30 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "link",
+            "detail": "`.titleline > a` matched 30 before, 0 now"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "value_format#1",
+      "mutation": "value_format",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 1.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "schema_drift",
+            "field": "link",
+            "detail": "0% of values look like url (was 100%), e.g. \"javascript:void(0)\""
+          },
+          {
+            "level": "Break",
+            "kind": "values_collapsed",
+            "field": "link",
+            "detail": "30 matches, all \"javascript:void(0)\" (was 30 distinct)"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "js_shell#1",
+      "mutation": "js_shell",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "title",
+            "detail": "`.titleline > a` matched 30 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "link",
+            "detail": "`.titleline > a` matched 30 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "points",
+            "detail": "`.score` matched 29 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "age",
+            "detail": "`.age a` matched 30 before, 0 now"
+          },
+          {
+            "level": "Warn",
+            "kind": "layout_changed",
+            "field": null,
+            "detail": "DOM shape similarity 0.00 < 0.50"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "truncate#1",
+      "mutation": "truncate",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 1.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "matches_dropped",
+            "field": "title",
+            "detail": "30 -> 6 matches"
+          },
+          {
+            "level": "Break",
+            "kind": "matches_dropped",
+            "field": "link",
+            "detail": "30 -> 6 matches"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "placeholder#1",
+      "mutation": "placeholder",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 1.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "values_collapsed",
+            "field": "title",
+            "detail": "30 matches, all \"Loading...\" (was 30 distinct)"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "text_edit#1",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "text_edit#2",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "text_edit#3",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "ad_churn#1",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "ad_churn#2",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "ad_churn#3",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "reorder#1",
+      "mutation": "reorder",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "tracking_attrs#1",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "tracking_attrs#2",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "tracking_attrs#3",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "new_section#1",
+      "mutation": "new_section",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 0.8620689655172413,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "fewer_items#1",
+      "mutation": "fewer_items",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 0.94,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "script_churn#1",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "script_churn#2",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "script_churn#3",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "hn-2022",
+      "before": "real/hn/20260901.html",
+      "after": "restyle#1",
+      "mutation": "restyle",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Warn",
+        "shape_similarity": 0.17647058823529413,
+        "signals": [
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "title",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "link",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "points",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "age",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "layout_changed",
+            "field": null,
+            "detail": "DOM shape similarity 0.18 < 0.50"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "wiki-2023",
+      "before": "real/wiki-rust/20230601.html",
+      "after": "remove_field#1",
+      "mutation": "remove_field",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.9973579920739762,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "heading",
+            "detail": "`#firstHeading` matched 1 before, 0 now"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "wiki-2023",
+      "before": "real/wiki-rust/20230601.html",
+      "after": "value_format#1",
+      "mutation": "value_format",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.9986789960369881,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "schema_drift",
+            "field": "heading",
+            "detail": "0% of values look like text (was 100%), e.g. \"\""
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "wiki-2023",
+      "before": "real/wiki-rust/20230601.html",
+      "after": "js_shell#1",
+      "mutation": "js_shell",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "heading",
+            "detail": "`#firstHeading` matched 1 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "infobox_label",
+            "detail": "`table.infobox th.infobox-label` matched 18 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "toc",
+            "detail": "`.vector-toc-text` matched 45 before, 0 now"
+          },
+          {
+            "level": "Warn",
+            "kind": "layout_changed",
+            "field": null,
+            "detail": "DOM shape similarity 0.00 < 0.50"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "wiki-2023",
+      "before": "real/wiki-rust/20230601.html",
+      "after": "text_edit#1",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "wiki-2023",
+      "before": "real/wiki-rust/20230601.html",
+      "after": "text_edit#2",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "wiki-2023",
+      "before": "real/wiki-rust/20230601.html",
+      "after": "text_edit#3",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "wiki-2023",
+      "before": "real/wiki-rust/20230601.html",
+      "after": "ad_churn#1",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "wiki-2023",
+      "before": "real/wiki-rust/20230601.html",
+      "after": "ad_churn#2",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "wiki-2023",
+      "before": "real/wiki-rust/20230601.html",
+      "after": "ad_churn#3",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "wiki-2023",
+      "before": "real/wiki-rust/20230601.html",
+      "after": "tracking_attrs#1",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "wiki-2023",
+      "before": "real/wiki-rust/20230601.html",
+      "after": "tracking_attrs#2",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "wiki-2023",
+      "before": "real/wiki-rust/20230601.html",
+      "after": "tracking_attrs#3",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "wiki-2023",
+      "before": "real/wiki-rust/20230601.html",
+      "after": "new_section#1",
+      "mutation": "new_section",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 0.9895424836601308,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "wiki-2023",
+      "before": "real/wiki-rust/20230601.html",
+      "after": "script_churn#1",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "wiki-2023",
+      "before": "real/wiki-rust/20230601.html",
+      "after": "script_churn#2",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "wiki-2023",
+      "before": "real/wiki-rust/20230601.html",
+      "after": "script_churn#3",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "wiki-2023",
+      "before": "real/wiki-rust/20230601.html",
+      "after": "restyle#1",
+      "mutation": "restyle",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Warn",
+        "shape_similarity": 0.01816958277254374,
+        "signals": [
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "heading",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "toc",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "layout_changed",
+            "field": null,
+            "detail": "DOM shape similarity 0.02 < 0.50"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "class_rename#1",
+      "mutation": "class_rename",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.8968253968253969,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "repo",
+            "detail": "`article.Box-row h2 a` matched 25 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "stars",
+            "detail": "`article.Box-row a[href$='/stargazers']` matched 25 before, 0 now"
+          },
+          {
+            "level": "Warn",
+            "kind": "selector_died",
+            "field": "about",
+            "detail": "`article.Box-row p` matched 25 before, 0 now"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "remove_field#1",
+      "mutation": "remove_field",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.9916317991631799,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "repo",
+            "detail": "`article.Box-row h2 a` matched 25 before, 0 now"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "tag_swap#1",
+      "mutation": "tag_swap",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.983402489626556,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "repo",
+            "detail": "`article.Box-row h2 a` matched 25 before, 0 now"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "value_format#1",
+      "mutation": "value_format",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 1.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "schema_drift",
+            "field": "stars",
+            "detail": "0% of values look like int (was 100%), e.g. \"See details\""
+          },
+          {
+            "level": "Break",
+            "kind": "values_collapsed",
+            "field": "stars",
+            "detail": "25 matches, all \"See details\" (was 25 distinct)"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "js_shell#1",
+      "mutation": "js_shell",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "repo",
+            "detail": "`article.Box-row h2 a` matched 25 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "stars",
+            "detail": "`article.Box-row a[href$='/stargazers']` matched 25 before, 0 now"
+          },
+          {
+            "level": "Warn",
+            "kind": "selector_died",
+            "field": "about",
+            "detail": "`article.Box-row p` matched 25 before, 0 now"
+          },
+          {
+            "level": "Warn",
+            "kind": "layout_changed",
+            "field": null,
+            "detail": "DOM shape similarity 0.00 < 0.50"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "truncate#1",
+      "mutation": "truncate",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 1.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "matches_dropped",
+            "field": "repo",
+            "detail": "25 -> 5 matches"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "placeholder#1",
+      "mutation": "placeholder",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.99581589958159,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "values_collapsed",
+            "field": "repo",
+            "detail": "25 matches, all \"Loading...\" (was 25 distinct)"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "text_edit#1",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "text_edit#2",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "text_edit#3",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "ad_churn#1",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "ad_churn#2",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "ad_churn#3",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "reorder#1",
+      "mutation": "reorder",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "tracking_attrs#1",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "tracking_attrs#2",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "tracking_attrs#3",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "new_section#1",
+      "mutation": "new_section",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 0.9676113360323887,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "fewer_items#1",
+      "mutation": "fewer_items",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "script_churn#1",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "script_churn#2",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "script_churn#3",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "gh-2024",
+      "before": "real/gh-trending/20240601.html",
+      "after": "restyle#1",
+      "mutation": "restyle",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Warn",
+        "shape_similarity": 0.0,
+        "signals": [
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "repo",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "stars",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "about",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "layout_changed",
+            "field": null,
+            "detail": "DOM shape similarity 0.00 < 0.50"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "class_rename#1",
+      "mutation": "class_rename",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.9805194805194806,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "release",
+            "detail": "`.release-number a` matched 225 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "link",
+            "detail": "`.release-number a` matched 225 before, 0 now"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "remove_field#1",
+      "mutation": "remove_field",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.9967213114754099,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "release",
+            "detail": "`.release-number a` matched 225 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "link",
+            "detail": "`.release-number a` matched 225 before, 0 now"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "tag_swap#1",
+      "mutation": "tag_swap",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.9934640522875817,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "release",
+            "detail": "`.release-number a` matched 225 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "link",
+            "detail": "`.release-number a` matched 225 before, 0 now"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "value_format#1",
+      "mutation": "value_format",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 1.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "schema_drift",
+            "field": "link",
+            "detail": "0% of values look like url (was 100%), e.g. \"javascript:void(0)\""
+          },
+          {
+            "level": "Break",
+            "kind": "values_collapsed",
+            "field": "link",
+            "detail": "225 matches, all \"javascript:void(0)\" (was 225 distinct)"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "js_shell#1",
+      "mutation": "js_shell",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.003278688524590164,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "release",
+            "detail": "`.release-number a` matched 225 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "link",
+            "detail": "`.release-number a` matched 225 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "date",
+            "detail": "`.release-date` matched 226 before, 0 now"
+          },
+          {
+            "level": "Warn",
+            "kind": "layout_changed",
+            "field": null,
+            "detail": "DOM shape similarity 0.00 < 0.50"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "truncate#1",
+      "mutation": "truncate",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 1.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "matches_dropped",
+            "field": "release",
+            "detail": "225 -> 45 matches"
+          },
+          {
+            "level": "Break",
+            "kind": "matches_dropped",
+            "field": "link",
+            "detail": "225 -> 45 matches"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "placeholder#1",
+      "mutation": "placeholder",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 1.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "values_collapsed",
+            "field": "release",
+            "detail": "225 matches, all \"Loading...\" (was 225 distinct)"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "text_edit#1",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "text_edit#2",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "text_edit#3",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "ad_churn#1",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "ad_churn#2",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "ad_churn#3",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "reorder#1",
+      "mutation": "reorder",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "tracking_attrs#1",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "tracking_attrs#2",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "tracking_attrs#3",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "new_section#1",
+      "mutation": "new_section",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 0.9744408945686901,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "fewer_items#1",
+      "mutation": "fewer_items",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "script_churn#1",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "script_churn#2",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "script_churn#3",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "py-downloads",
+      "before": "real/py-downloads/20250601.html",
+      "after": "restyle#1",
+      "mutation": "restyle",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Warn",
+        "shape_similarity": 0.004942339373970346,
+        "signals": [
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "date",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "layout_changed",
+            "field": null,
+            "detail": "DOM shape similarity 0.00 < 0.50"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "class_rename#1",
+      "mutation": "class_rename",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.9365079365079365,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "title",
+            "detail": "`.link a.u-url` matched 25 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "link",
+            "detail": "`.link a.u-url` matched 25 before, 0 now"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "remove_field#1",
+      "mutation": "remove_field",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.9836065573770492,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "title",
+            "detail": "`.link a.u-url` matched 25 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "link",
+            "detail": "`.link a.u-url` matched 25 before, 0 now"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "tag_swap#1",
+      "mutation": "tag_swap",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.967741935483871,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "title",
+            "detail": "`.link a.u-url` matched 25 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "link",
+            "detail": "`.link a.u-url` matched 25 before, 0 now"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "value_format#1",
+      "mutation": "value_format",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 1.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "schema_drift",
+            "field": "link",
+            "detail": "0% of values look like url (was 100%), e.g. \"javascript:void(0)\""
+          },
+          {
+            "level": "Break",
+            "kind": "values_collapsed",
+            "field": "link",
+            "detail": "25 matches, all \"javascript:void(0)\" (was 25 distinct)"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "js_shell#1",
+      "mutation": "js_shell",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.01639344262295082,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "title",
+            "detail": "`.link a.u-url` matched 25 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "link",
+            "detail": "`.link a.u-url` matched 25 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "score",
+            "detail": "`.upvoter` matched 25 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "age",
+            "detail": "`.byline time` matched 25 before, 0 now"
+          },
+          {
+            "level": "Warn",
+            "kind": "layout_changed",
+            "field": null,
+            "detail": "DOM shape similarity 0.02 < 0.50"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "truncate#1",
+      "mutation": "truncate",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 1.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "matches_dropped",
+            "field": "title",
+            "detail": "25 -> 5 matches"
+          },
+          {
+            "level": "Break",
+            "kind": "matches_dropped",
+            "field": "link",
+            "detail": "25 -> 5 matches"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "placeholder#1",
+      "mutation": "placeholder",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 1.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "values_collapsed",
+            "field": "title",
+            "detail": "25 matches, all \"Loading...\" (was 25 distinct)"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "text_edit#1",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "text_edit#2",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "text_edit#3",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "ad_churn#1",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "ad_churn#2",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "ad_churn#3",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "reorder#1",
+      "mutation": "reorder",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "tracking_attrs#1",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "tracking_attrs#2",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "tracking_attrs#3",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "new_section#1",
+      "mutation": "new_section",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 0.8840579710144928,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "fewer_items#1",
+      "mutation": "fewer_items",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 0.9672131147540983,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "script_churn#1",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "script_churn#2",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "script_churn#3",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "lobsters-2025",
+      "before": "real/lobsters/20250601.html",
+      "after": "restyle#1",
+      "mutation": "restyle",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Warn",
+        "shape_similarity": 0.06201550387596899,
+        "signals": [
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "title",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "link",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "score",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "age",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "layout_changed",
+            "field": null,
+            "detail": "DOM shape similarity 0.06 < 0.50"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "pypi-requests",
+      "before": "real/pypi-requests/20250601.html",
+      "after": "class_rename#1",
+      "mutation": "class_rename",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.992,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "name",
+            "detail": "`h1.package-header__name` matched 1 before, 0 now"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "pypi-requests",
+      "before": "real/pypi-requests/20250601.html",
+      "after": "remove_field#1",
+      "mutation": "remove_field",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.9959839357429718,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "name",
+            "detail": "`h1.package-header__name` matched 1 before, 0 now"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "pypi-requests",
+      "before": "real/pypi-requests/20250601.html",
+      "after": "tag_swap#1",
+      "mutation": "tag_swap",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.992,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "name",
+            "detail": "`h1.package-header__name` matched 1 before, 0 now"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "pypi-requests",
+      "before": "real/pypi-requests/20250601.html",
+      "after": "value_format#1",
+      "mutation": "value_format",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 1.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "schema_drift",
+            "field": "released",
+            "detail": "0% of values look like date (was 100%), e.g. \"See details\""
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "pypi-requests",
+      "before": "real/pypi-requests/20250601.html",
+      "after": "js_shell#1",
+      "mutation": "js_shell",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.004016064257028112,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "name",
+            "detail": "`h1.package-header__name` matched 1 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "released",
+            "detail": "`.package-header__date time` matched 1 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "summary",
+            "detail": "`p.package-description__summary` matched 1 before, 0 now"
+          },
+          {
+            "level": "Warn",
+            "kind": "layout_changed",
+            "field": null,
+            "detail": "DOM shape similarity 0.00 < 0.50"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "pypi-requests",
+      "before": "real/pypi-requests/20250601.html",
+      "after": "text_edit#1",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "pypi-requests",
+      "before": "real/pypi-requests/20250601.html",
+      "after": "text_edit#2",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "pypi-requests",
+      "before": "real/pypi-requests/20250601.html",
+      "after": "text_edit#3",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "pypi-requests",
+      "before": "real/pypi-requests/20250601.html",
+      "after": "ad_churn#1",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "pypi-requests",
+      "before": "real/pypi-requests/20250601.html",
+      "after": "ad_churn#2",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "pypi-requests",
+      "before": "real/pypi-requests/20250601.html",
+      "after": "ad_churn#3",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "pypi-requests",
+      "before": "real/pypi-requests/20250601.html",
+      "after": "tracking_attrs#1",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "pypi-requests",
+      "before": "real/pypi-requests/20250601.html",
+      "after": "tracking_attrs#2",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "pypi-requests",
+      "before": "real/pypi-requests/20250601.html",
+      "after": "tracking_attrs#3",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "pypi-requests",
+      "before": "real/pypi-requests/20250601.html",
+      "after": "new_section#1",
+      "mutation": "new_section",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 0.9688715953307393,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "pypi-requests",
+      "before": "real/pypi-requests/20250601.html",
+      "after": "script_churn#1",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "pypi-requests",
+      "before": "real/pypi-requests/20250601.html",
+      "after": "script_churn#2",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "pypi-requests",
+      "before": "real/pypi-requests/20250601.html",
+      "after": "script_churn#3",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "pypi-requests",
+      "before": "real/pypi-requests/20250601.html",
+      "after": "restyle#1",
+      "mutation": "restyle",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Warn",
+        "shape_similarity": 0.0498960498960499,
+        "signals": [
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "name",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "released",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "summary",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "layout_changed",
+            "field": null,
+            "detail": "DOM shape similarity 0.05 < 0.50"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "class_rename#1",
+      "mutation": "class_rename",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.8333333333333334,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "post",
+            "detail": "`table.post-list td.bn a` matched 319 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "link",
+            "detail": "`table.post-list td.bn a` matched 319 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "date",
+            "detail": "`table.post-list td.tr` matched 319 before, 0 now"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "remove_field#1",
+      "mutation": "remove_field",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.9772727272727273,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "post",
+            "detail": "`table.post-list td.bn a` matched 319 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "link",
+            "detail": "`table.post-list td.bn a` matched 319 before, 0 now"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "tag_swap#1",
+      "mutation": "tag_swap",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.9555555555555556,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "post",
+            "detail": "`table.post-list td.bn a` matched 319 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "link",
+            "detail": "`table.post-list td.bn a` matched 319 before, 0 now"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "value_format#1",
+      "mutation": "value_format",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 1.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "schema_drift",
+            "field": "link",
+            "detail": "0% of values look like url (was 100%), e.g. \"javascript:void(0)\""
+          },
+          {
+            "level": "Break",
+            "kind": "values_collapsed",
+            "field": "link",
+            "detail": "319 matches, all \"javascript:void(0)\" (was 319 distinct)"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "js_shell#1",
+      "mutation": "js_shell",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "post",
+            "detail": "`table.post-list td.bn a` matched 319 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "link",
+            "detail": "`table.post-list td.bn a` matched 319 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "date",
+            "detail": "`table.post-list td.tr` matched 319 before, 0 now"
+          },
+          {
+            "level": "Warn",
+            "kind": "layout_changed",
+            "field": null,
+            "detail": "DOM shape similarity 0.00 < 0.50"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "truncate#1",
+      "mutation": "truncate",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 1.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "matches_dropped",
+            "field": "post",
+            "detail": "319 -> 63 matches"
+          },
+          {
+            "level": "Break",
+            "kind": "matches_dropped",
+            "field": "link",
+            "detail": "319 -> 63 matches"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "placeholder#1",
+      "mutation": "placeholder",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 1.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "values_collapsed",
+            "field": "post",
+            "detail": "319 matches, all \"Loading...\" (was 316 distinct)"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "text_edit#1",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "text_edit#2",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "text_edit#3",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "ad_churn#1",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "ad_churn#2",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "ad_churn#3",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "reorder#1",
+      "mutation": "reorder",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "tracking_attrs#1",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "tracking_attrs#2",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "tracking_attrs#3",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "new_section#1",
+      "mutation": "new_section",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 0.8461538461538461,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "fewer_items#1",
+      "mutation": "fewer_items",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "script_churn#1",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "script_churn#2",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "script_churn#3",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "rust-blog",
+      "before": "real/rust-blog/20250601.html",
+      "after": "restyle#1",
+      "mutation": "restyle",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Warn",
+        "shape_similarity": 0.03529411764705882,
+        "signals": [
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "date",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "layout_changed",
+            "field": null,
+            "detail": "DOM shape similarity 0.04 < 0.50"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20250601.html",
+      "after": "class_rename#1",
+      "mutation": "class_rename",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.8148148148148148,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "crate",
+            "detail": "`.release .name` matched 30 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "age",
+            "detail": "`.release .date` matched 30 before, 0 now"
+          },
+          {
+            "level": "Warn",
+            "kind": "selector_died",
+            "field": "about",
+            "detail": "`.release .description` matched 30 before, 0 now"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20250601.html",
+      "after": "remove_field#1",
+      "mutation": "remove_field",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.9795918367346939,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "crate",
+            "detail": "`.release .name` matched 30 before, 0 now"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20250601.html",
+      "after": "value_format#1",
+      "mutation": "value_format",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 1.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "schema_drift",
+            "field": "age",
+            "detail": "0% of values look like date (was 100%), e.g. \"See details\""
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20250601.html",
+      "after": "js_shell#1",
+      "mutation": "js_shell",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 0.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "crate",
+            "detail": "`.release .name` matched 30 before, 0 now"
+          },
+          {
+            "level": "Break",
+            "kind": "selector_died",
+            "field": "age",
+            "detail": "`.release .date` matched 30 before, 0 now"
+          },
+          {
+            "level": "Warn",
+            "kind": "selector_died",
+            "field": "about",
+            "detail": "`.release .description` matched 30 before, 0 now"
+          },
+          {
+            "level": "Warn",
+            "kind": "layout_changed",
+            "field": null,
+            "detail": "DOM shape similarity 0.00 < 0.50"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20250601.html",
+      "after": "truncate#1",
+      "mutation": "truncate",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 1.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "matches_dropped",
+            "field": "crate",
+            "detail": "30 -> 6 matches"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20250601.html",
+      "after": "placeholder#1",
+      "mutation": "placeholder",
+      "label_break": true,
+      "note": "",
+      "report": {
+        "verdict": "Break",
+        "shape_similarity": 1.0,
+        "signals": [
+          {
+            "level": "Break",
+            "kind": "values_collapsed",
+            "field": "crate",
+            "detail": "30 matches, all \"Loading...\" (was 30 distinct)"
+          }
+        ]
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20250601.html",
+      "after": "text_edit#1",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20250601.html",
+      "after": "text_edit#2",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20250601.html",
+      "after": "text_edit#3",
+      "mutation": "text_edit",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20250601.html",
+      "after": "ad_churn#1",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20250601.html",
+      "after": "ad_churn#2",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20250601.html",
+      "after": "ad_churn#3",
+      "mutation": "ad_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20250601.html",
+      "after": "reorder#1",
+      "mutation": "reorder",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20250601.html",
+      "after": "tracking_attrs#1",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20250601.html",
+      "after": "tracking_attrs#2",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20250601.html",
+      "after": "tracking_attrs#3",
+      "mutation": "tracking_attrs",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20250601.html",
+      "after": "new_section#1",
+      "mutation": "new_section",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 0.8596491228070176,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20250601.html",
+      "after": "fewer_items#1",
+      "mutation": "fewer_items",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20250601.html",
+      "after": "script_churn#1",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20250601.html",
+      "after": "script_churn#2",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20250601.html",
+      "after": "script_churn#3",
+      "mutation": "script_churn",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Ok",
+        "shape_similarity": 1.0,
+        "signals": []
+      }
+    },
+    {
+      "set": "synthetic",
+      "config": "docsrs-releases",
+      "before": "real/docsrs-releases/20250601.html",
+      "after": "restyle#1",
+      "mutation": "restyle",
+      "label_break": false,
+      "note": "",
+      "report": {
+        "verdict": "Warn",
+        "shape_similarity": 0.010309278350515464,
+        "signals": [
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "crate",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "age",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "field_moved",
+            "field": "about",
+            "detail": "matches sit in a new container (anchor overlap 0.00)"
+          },
+          {
+            "level": "Warn",
+            "kind": "layout_changed",
+            "field": null,
+            "detail": "DOM shape similarity 0.01 < 0.50"
+          }
+        ]
+      }
+    }
+  ],
+  "scores": {
+    "all/any_alert": {
+      "tp": 53,
+      "fp": 9,
+      "fn_": 0,
+      "tn": 125
+    },
+    "all/break_only": {
+      "tp": 53,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 134
+    },
+    "mutation/ad_churn/any_alert": {
+      "tp": 0,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 24
+    },
+    "mutation/ad_churn/break_only": {
+      "tp": 0,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 24
+    },
+    "mutation/class_rename/any_alert": {
+      "tp": 7,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 0
+    },
+    "mutation/class_rename/break_only": {
+      "tp": 7,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 0
+    },
+    "mutation/fewer_items/any_alert": {
+      "tp": 0,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 6
+    },
+    "mutation/fewer_items/break_only": {
+      "tp": 0,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 6
+    },
+    "mutation/js_shell/any_alert": {
+      "tp": 8,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 0
+    },
+    "mutation/js_shell/break_only": {
+      "tp": 8,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 0
+    },
+    "mutation/new_section/any_alert": {
+      "tp": 0,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 8
+    },
+    "mutation/new_section/break_only": {
+      "tp": 0,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 8
+    },
+    "mutation/placeholder/any_alert": {
+      "tp": 6,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 0
+    },
+    "mutation/placeholder/break_only": {
+      "tp": 6,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 0
+    },
+    "mutation/real/any_alert": {
+      "tp": 4,
+      "fp": 1,
+      "fn_": 0,
+      "tn": 9
+    },
+    "mutation/real/break_only": {
+      "tp": 4,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 10
+    },
+    "mutation/remove_field/any_alert": {
+      "tp": 8,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 0
+    },
+    "mutation/remove_field/break_only": {
+      "tp": 8,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 0
+    },
+    "mutation/reorder/any_alert": {
+      "tp": 0,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 6
+    },
+    "mutation/reorder/break_only": {
+      "tp": 0,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 6
+    },
+    "mutation/restyle/any_alert": {
+      "tp": 0,
+      "fp": 8,
+      "fn_": 0,
+      "tn": 0
+    },
+    "mutation/restyle/break_only": {
+      "tp": 0,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 8
+    },
+    "mutation/script_churn/any_alert": {
+      "tp": 0,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 24
+    },
+    "mutation/script_churn/break_only": {
+      "tp": 0,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 24
+    },
+    "mutation/tag_swap/any_alert": {
+      "tp": 6,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 0
+    },
+    "mutation/tag_swap/break_only": {
+      "tp": 6,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 0
+    },
+    "mutation/text_edit/any_alert": {
+      "tp": 0,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 24
+    },
+    "mutation/text_edit/break_only": {
+      "tp": 0,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 24
+    },
+    "mutation/tracking_attrs/any_alert": {
+      "tp": 0,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 24
+    },
+    "mutation/tracking_attrs/break_only": {
+      "tp": 0,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 24
+    },
+    "mutation/truncate/any_alert": {
+      "tp": 6,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 0
+    },
+    "mutation/truncate/break_only": {
+      "tp": 6,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 0
+    },
+    "mutation/value_format/any_alert": {
+      "tp": 8,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 0
+    },
+    "mutation/value_format/break_only": {
+      "tp": 8,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 0
+    },
+    "real/any_alert": {
+      "tp": 4,
+      "fp": 1,
+      "fn_": 0,
+      "tn": 9
+    },
+    "real/break_only": {
+      "tp": 4,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 10
+    },
+    "synthetic/any_alert": {
+      "tp": 49,
+      "fp": 8,
+      "fn_": 0,
+      "tn": 116
+    },
+    "synthetic/break_only": {
+      "tp": 49,
+      "fp": 0,
+      "fn_": 0,
+      "tn": 124
+    }
+  }
+}

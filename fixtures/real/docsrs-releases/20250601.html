@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="docs.rs 0.6.0 (ee9a3fe6 2025-03-28)"><link rel="stylesheet" href="/-/static/vendored.css?0-6-0-ee9a3fe6-2025-03-28" media="all" />
+        <link rel="stylesheet" href="/-/static/style.css?0-6-0-ee9a3fe6-2025-03-28" media="all" />
+        <link rel="stylesheet" href="/-/static/font-awesome.css?0-6-0-ee9a3fe6-2025-03-28" media="all" />
+
+        <link rel="search" href="/-/static/opensearch.xml" type="application/opensearchdescription+xml" title="Docs.rs" />
+
+        <title>Releases - Docs.rs</title>
+
+        <script nonce="XzUvmJzY27lt9+wjsZa4rodZV8+tTS0nY+R2Z8zigmImNyvo">(function() {
+    function applyTheme(theme) {
+        if (theme) {
+            document.documentElement.dataset.docsRsTheme = theme;
+        }
+    }
+
+    window.addEventListener("storage", ev => {
+        if (ev.key === "rustdoc-theme") {
+            applyTheme(ev.newValue);
+        }
+    });
+
+    // see ./storage-change-detection.html for details
+    window.addEventListener("message", ev => {
+        if (ev.data && ev.data.storage && ev.data.storage.key === "rustdoc-theme") {
+            applyTheme(ev.data.storage.value);
+        }
+    });
+
+    applyTheme(window.localStorage.getItem("rustdoc-theme"));
+})();</script><script defer type="text/javascript" nonce="XzUvmJzY27lt9+wjsZa4rodZV8+tTS0nY+R2Z8zigmImNyvo" src="/-/static/menu.js?0-6-0-ee9a3fe6-2025-03-28"></script>
+        <script defer type="text/javascript" nonce="XzUvmJzY27lt9+wjsZa4rodZV8+tTS0nY+R2Z8zigmImNyvo" src="/-/static/index.js?0-6-0-ee9a3fe6-2025-03-28"></script>
+    </head>
+
+    <body class="centered">
+<div class="nav-container">
+    <div class="container">
+        <div class="pure-menu pure-menu-horizontal" role="navigation" aria-label="Main navigation">
+            <form action="/releases/search"
+                  method="GET"
+                  id="nav-search-form"
+                  class="landing-search-form-nav  ">
+
+                
+                <a href="/" class="pure-menu-heading pure-menu-link docsrs-logo" aria-label="Docs.rs">
+                    <span title="Docs.rs"><span class="fa fa-solid fa-cubes " aria-hidden="true"></span></span>
+                    <span class="title">Docs.rs</span>
+                </a><div class="spacer"></div>
+                
+                
+
+<ul class="pure-menu-list">
+                    <li class="pure-menu-item pure-menu-has-children">
+                        <a href="#" class="pure-menu-link" aria-label="Rust">Rust</a>
+                        <ul class="pure-menu-children">
+                            
+    <li class="pure-menu-item">
+        <a class="pure-menu-link" href="/about" >
+            About docs.rs
+        </a>
+    </li>
+
+                            
+    <li class="pure-menu-item">
+        <a class="pure-menu-link" href="https://foundation.rust-lang.org/policies/privacy-policy/#docs.rs" target="_blank">
+            Privacy policy
+        </a>
+    </li>
+
+                            
+    <li class="pure-menu-item">
+        <a class="pure-menu-link" href="https://www.rust-lang.org/" target="_blank">
+            Rust website
+        </a>
+    </li>
+
+                            
+    <li class="pure-menu-item">
+        <a class="pure-menu-link" href="https://doc.rust-lang.org/book/" target="_blank">
+            The Book
+        </a>
+    </li>
+
+
+                            
+    <li class="pure-menu-item">
+        <a class="pure-menu-link" href="https://doc.rust-lang.org/std/" target="_blank">
+            Standard Library API Reference
+        </a>
+    </li>
+
+
+                            
+    <li class="pure-menu-item">
+        <a class="pure-menu-link" href="https://doc.rust-lang.org/rust-by-example/" target="_blank">
+            Rust by Example
+        </a>
+    </li>
+
+
+                            
+    <li class="pure-menu-item">
+        <a class="pure-menu-link" href="https://doc.rust-lang.org/cargo/guide/" target="_blank">
+            The Cargo Guide
+        </a>
+    </li>
+
+
+                            
+    <li class="pure-menu-item">
+        <a class="pure-menu-link" href="https://doc.rust-lang.org/nightly/clippy" target="_blank">
+            Clippy Documentation
+        </a>
+    </li>
+
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div id="search-input-nav">
+                    <label for="nav-search">
+                        <span class="fa fa-solid fa-magnifying-glass " aria-hidden="true"></span>
+                    </label>
+
+                    
+                    
+                    <input id="nav-search" name="query" type="text" aria-label="Find crate by search query" tabindex="-1"
+                        placeholder="Find crate"
+                        >
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    
+    <div class="docsrs-package-container">
+        <div class="container">
+            <div class="description-container">
+                <h1 id="crate-title">Releases</h1>
+                <div class="description">Recently uploaded crates</div>
+
+                
+                <div class="pure-menu pure-menu-horizontal">
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item">
+                            <a href="/releases" class="pure-menu-link pure-menu-active">
+                                <span class="fa fa-solid fa-leaf " aria-hidden="true"></span>
+                                <span class="title">Recent</span>
+                            </a>
+                        </li>
+
+                        <li class="pure-menu-item">
+                            <a href="/releases/stars" class="pure-menu-link">
+                                <span class="fa fa-solid fa-star " aria-hidden="true"></span>
+                                <span class="title">Stars</span>
+                            </a>
+                        </li>
+
+                        <li class="pure-menu-item">
+                            <a href="/releases/recent-failures"
+                                class="pure-menu-link">
+                                <span class="fa fa-solid fa-triangle-exclamation " aria-hidden="true"></span>
+                                <span class="title">Recent Failures</span>
+                            </a>
+                        </li>
+
+                        <li class="pure-menu-item">
+                            <a href="/releases/failures"
+                                class="pure-menu-link">
+                                <span class="fa fa-regular fa-star " aria-hidden="true"></span>
+                                <span class="title">Failures By Stars</span>
+                            </a>
+                        </li>
+
+                        <li class="pure-menu-item">
+                            <a href="/releases/activity"
+                                class="pure-menu-link">
+                                <span class="fa fa-solid fa-chart-line " aria-hidden="true"></span>
+                                <span class="title">Activity</span>
+                            </a>
+                        </li>
+
+                        <li class="pure-menu-item">
+                            <a href="/releases/queue" class="pure-menu-link">
+                                <span class="fa fa-solid fa-list " aria-hidden="true"></span>
+                                <span class="title">Queue</span>
+                            </a>
+                        </li></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="container">
+        <div class="recent-releases-container"><ul>
+                <li><a href="/azure_mgmt_videoanalyzer/0.21.0/azure_mgmt_videoanalyzer/" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">azure_mgmt_videoanalyzer-0.21.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">generated REST API bindings</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:09:00Z">1 seconds ago</div>
+                                </div>
+                            </a></li><li><a href="/azure_mgmt_vi/0.21.0/azure_mgmt_vi/" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">azure_mgmt_vi-0.21.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">generated REST API bindings</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:08:58Z">2 seconds ago</div>
+                                </div>
+                            </a></li><li><a href="/azure_mgmt_trafficmanager/0.21.0/azure_mgmt_trafficmanager/" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">azure_mgmt_trafficmanager-0.21.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">generated REST API bindings</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:08:01Z">one minute ago</div>
+                                </div>
+                            </a></li><li><a href="/crate/nu_plugin_regex/0.12.0" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">nu_plugin_regex-0.12.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">nu plugin to search text with regex</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:08:00Z">one minute ago</div>
+                                </div>
+                            </a></li><li><a href="/azure_mgmt_verifiedid/0.21.0/azure_mgmt_verifiedid/" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">azure_mgmt_verifiedid-0.21.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">generated REST API bindings</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:07:55Z">one minute ago</div>
+                                </div>
+                            </a></li><li><a href="/tokio-graceful-shutdown/0.16.0/tokio_graceful_shutdown/" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">tokio-graceful-shutdown-0.16.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">Utilities to perform a graceful shutdown on a Tokio based service.</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:07:01Z">one minute ago</div>
+                                </div>
+                            </a></li><li><a href="/azure_mgmt_timeseriesinsights/0.21.0/azure_mgmt_timeseriesinsights/" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">azure_mgmt_timeseriesinsights-0.21.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">generated REST API bindings</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:07:01Z">2 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/azure_mgmt_testbase/0.21.0/azure_mgmt_testbase/" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">azure_mgmt_testbase-0.21.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">generated REST API bindings</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:06:33Z">2 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/dev_bestia_cargo_completion/2025.329.1903/dev_bestia_cargo_completion_lib/" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">dev_bestia_cargo_completion-2025.329.1903
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">Auto-completion for cargo-auto and automation_tasks_rs and partial auto-completion for cargo in bash</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:06:04Z">2 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/azure_mgmt_synapse/0.21.0/azure_mgmt_synapse/" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">azure_mgmt_synapse-0.21.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">generated REST API bindings</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:05:55Z">3 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/crate/nu_plugin_query_git/0.12.0" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">nu_plugin_query_git-0.12.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">a nushell plugin called query_git</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:05:35Z">3 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/azure_mgmt_terraform/0.21.0/azure_mgmt_terraform/" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">azure_mgmt_terraform-0.21.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">generated REST API bindings</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:05:28Z">3 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/cxx/1.0.152/cxx/" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">cxx-1.0.152
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">Safe interop between Rust and C++</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:04:33Z">4 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/crate/nu_plugin_parquet/0.13.0" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">nu_plugin_parquet-0.13.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">nu plugin to add parquet support</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:04:30Z">4 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/cxxbridge-macro/1.0.152/cxxbridge_macro/" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">cxxbridge-macro-1.0.152
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">Implementation detail of the `cxx` crate.</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:04:25Z">4 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/crate/cxxbridge-cmd/1.0.152" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">cxxbridge-cmd-1.0.152
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">C++ code generator for integrating `cxx` crate into a non-Cargo build.</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:04:23Z">4 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/cxx-build/1.0.152/cxx_build/" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">cxx-build-1.0.152
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">C++ code generator for integrating `cxx` crate into a Cargo build.</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:04:18Z">4 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/cxx-gen/0.7.152/cxx_gen/" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">cxx-gen-0.7.152
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">C++ code generator for integrating `cxx` crate into higher level tools.</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:04:18Z">4 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/cxxbridge-flags/1.0.152/cxxbridge_flags/" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">cxxbridge-flags-1.0.152
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">Compiler configuration of the `cxx` crate (implementation detail)</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:04:12Z">4 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/azure_mgmt_syntex/0.21.0/azure_mgmt_syntex/" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">azure_mgmt_syntex-0.21.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">generated REST API bindings</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:04:12Z">4 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/azure_mgmt_support/0.21.0/azure_mgmt_support/" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">azure_mgmt_support-0.21.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">generated REST API bindings</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:04:08Z">4 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/azure_mgmt_streamanalytics/0.21.0/azure_mgmt_streamanalytics/" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">azure_mgmt_streamanalytics-0.21.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">generated REST API bindings</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:03:22Z">5 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/azure_mgmt_subscription/0.21.0/azure_mgmt_subscription/" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">azure_mgmt_subscription-0.21.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">generated REST API bindings</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:03:14Z">5 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/crate/nu_plugin_jwalk/0.15.0" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">nu_plugin_jwalk-0.15.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">a nushell plugin called jwalk</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:02:15Z">6 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/spider_chrome/2.36.0/chromiumoxide/" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">spider_chrome-2.36.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">Library for interacting with a chrome instance with the chrome devtools protocol for spider</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:02:11Z">6 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/crate/nu_plugin_json_path/0.13.0" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">nu_plugin_json_path-0.13.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">a nushell plugin created to parse json files using jsonpath</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:02:09Z">6 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/spider_transformations/2.36.0/spider_transformations/" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">spider_transformations-2.36.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">Transformation utils to use for Spider Web Crawler.</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:02:03Z">6 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/crate/spider_worker/2.36.0" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">spider_worker-2.36.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">The fastest web crawler as a worker or proxy.</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:00:53Z">8 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/spider_utils/2.36.0/spider_utils/" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">spider_utils-2.36.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">Utilities to use for Spider Web Crawler.</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:00:46Z">8 minutes ago</div>
+                                </div>
+                            </a></li><li><a href="/crate/spider_cli/2.36.0" class="release">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">spider_cli-2.36.0
+                                        </div>
+
+                                    <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">The fastest web crawler CLI written in Rust.</div><div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                            title="2025-03-29T19:00:11Z">8 minutes ago</div>
+                                </div>
+                            </a></li></ul>
+
+            <div class="pagination">
+                <a class="pure-button pure-button-normal" href="/releases/recent/2">
+                            Next Page <span class="fa fa-solid fa-arrow-right " aria-hidden="true"></span>
+                        </a>
+            </div>
+        </div>
+    </div><script nonce="XzUvmJzY27lt9+wjsZa4rodZV8+tTS0nY+R2Z8zigmImNyvo" type="text/javascript" src="/-/static/keyboard.js?0-6-0-ee9a3fe6-2025-03-28"></script></body>
+</html>
