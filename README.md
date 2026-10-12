@@ -4,7 +4,7 @@ A small Rust service that re-checks public pages and raises an alert when a layo
 
 Built by Srinivas Sivaratri as a demo for Datamint's Rust Systems Engineer role. Not affiliated with Datamint.
 
-Live: https://page-canary.onrender.com (free tier, sleeps when idle, first load can take a minute) · Video: [site/demo.mp4](site/demo.mp4) · Full results: [eval/RESULTS.md](eval/RESULTS.md)
+Live: https://sivaratrisrinivas.github.io/page-canary/ (rebuilt by a GitHub Action that runs one polite check every 6 hours) · Video: [site/demo.mp4](site/demo.mp4) · Full results: [eval/RESULTS.md](eval/RESULTS.md)
 
 ## Why
 
@@ -38,21 +38,25 @@ A clean check becomes the new baseline. An alert keeps the old one, so a break s
 
 - Reads robots.txt for every host and obeys `Disallow` and `Crawl-delay` (HN asks for 30 s).
 - Identifies itself: `page-canary/0.1.0 (+https://github.com/sivaratrisrinivas/page-canary)`.
-- At least 10 s between requests to one host, one check per target per hour on the live demo.
+- At least 10 s between requests to one host. The live demo checks each target once every 6 hours.
 - On 401, 403, 429, 503 or a challenge page it stops and leaves the host alone for 6 hours. No retries, no other user agent, no headless browser, no proxies.
 
-You can see two of these on the live page: Lobsters disallows unknown bots in robots.txt, so it is skipped, and PyPI answers with a JavaScript client challenge, so the monitor stops there. `tests/polite.rs` checks both behaviours against a local server.
+You can see this on the live page: Lobsters disallows unknown bots in robots.txt, so it is skipped. PyPI sometimes answers with a JavaScript client challenge; when it does, the monitor reports "bot wall: stopped" and moves on. `tests/polite.rs` checks both behaviours against a local server.
 
 ## Run it
 
 ```
 cargo test --release            # replay tests on saved snapshots + politeness tests
 cargo run --release -- eval     # rewrites eval/RESULTS.md and eval/results.json
-cargo run --release -- serve    # dashboard on :8080, checks targets.json every hour
+cargo run --release -- serve    # dashboard on :8080, checks targets.json every hour (CHECK_MINUTES)
+cargo run --release -- check state/live.json   # one pass, baselines kept in a file
+cargo run --release -- site public state/live.json   # static dashboard, as deployed
 cargo run --release -- snap     # re-download fixtures/real/plan.json from the Wayback Machine, politely
 ```
 
-The dashboard also has a "Try a mutation" form that replays any mutation on any saved page and shows what the extractor sees before and after.
+The dashboard also has a mutation replay section that replays any mutation on any saved page and shows what the extractor sees before and after.
+
+The live demo is GitHub Pages plus a scheduled Action ([.github/workflows/pages.yml](.github/workflows/pages.yml)), baselines carried between runs in the Actions cache. A `Dockerfile` is included for running `serve` anywhere.
 
 ## Built vs simulated
 
