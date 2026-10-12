@@ -1,0 +1,140 @@
+[
+ {
+  "id": "hn",
+  "ts": "20210601",
+  "url": "https://web.archive.org/web/20210601000000id_/https://news.ycombinator.com/",
+  "file": "fixtures/real/hn/20210601.html"
+ },
+ {
+  "id": "hn",
+  "ts": "20210602",
+  "url": "https://web.archive.org/web/20210602000000id_/https://news.ycombinator.com/",
+  "file": "fixtures/real/hn/20210602.html"
+ },
+ {
+  "id": "hn",
+  "ts": "20221201",
+  "url": "https://web.archive.org/web/20221201000000id_/https://news.ycombinator.com/",
+  "file": "fixtures/real/hn/20221201.html"
+ },
+ {
+  "id": "hn",
+  "ts": "20260901",
+  "url": "https://web.archive.org/web/20260901000000id_/https://news.ycombinator.com/",
+  "file": "fixtures/real/hn/20260901.html"
+ },
+ {
+  "id": "wiki-rust",
+  "ts": "20220601",
+  "url": "https://web.archive.org/web/20220601000000id_/https://en.wikipedia.org/wiki/Rust_(programming_language)",
+  "file": "fixtures/real/wiki-rust/20220601.html"
+ },
+ {
+  "id": "wiki-rust",
+  "ts": "20220701",
+  "url": "https://web.archive.org/web/20220701000000id_/https://en.wikipedia.org/wiki/Rust_(programming_language)",
+  "file": "fixtures/real/wiki-rust/20220701.html"
+ },
+ {
+  "id": "wiki-rust",
+  "ts": "20230601",
+  "url": "https://web.archive.org/web/20230601000000id_/https://en.wikipedia.org/wiki/Rust_(programming_language)",
+  "file": "fixtures/real/wiki-rust/20230601.html"
+ },
+ {
+  "id": "gh-trending",
+  "ts": "20200601",
+  "url": "https://web.archive.org/web/20200601000000id_/https://github.com/trending",
+  "file": "fixtures/real/gh-trending/20200601.html"
+ },
+ {
+  "id": "gh-trending",
+  "ts": "20220601",
+  "url": "https://web.archive.org/web/20220601000000id_/https://github.com/trending",
+  "file": "fixtures/real/gh-trending/20220601.html"
+ },
+ {
+  "id": "gh-trending",
+  "ts": "20240601",
+  "url": "https://web.archive.org/web/20240601000000id_/https://github.com/trending",
+  "file": "fixtures/real/gh-trending/20240601.html"
+ },
+ {
+  "id": "py-downloads",
+  "ts": "20210601",
+  "url": "https://web.archive.org/web/20210601000000id_/https://www.python.org/downloads/",
+  "file": "fixtures/real/py-downloads/20210601.html"
+ },
+ {
+  "id": "py-downloads",
+  "ts": "20240601",
+  "url": "https://web.archive.org/web/20240601000000id_/https://www.python.org/downloads/",
+  "file": "fixtures/real/py-downloads/20240601.html"
+ },
+ {
+  "id": "py-downloads",
+  "ts": "20240602",
+  "url": "https://web.archive.org/web/20240602000000id_/https://www.python.org/downloads/",
+  "file": "fixtures/real/py-downloads/20240602.html"
+ },
+ {
+  "id": "lobsters",
+  "ts": "20210601",
+  "url": "https://web.archive.org/web/20210601000000id_/https://lobste.rs/",
+  "file": "fixtures/real/lobsters/20210601.html"
+ },
+ {
+  "id": "lobsters",
+  "ts": "20210602",
+  "url": "https://web.archive.org/web/20210602000000id_/https://lobste.rs/",
+  "file": "fixtures/real/lobsters/20210602.html"
+ },
+ {
+  "id": "lobsters",
+  "ts": "20250601",
+  "url": "https://web.archive.org/web/20250601000000id_/https://lobste.rs/",
+  "file": "fixtures/real/lobsters/20250601.html"
+ },
+ {
+  "id": "pypi-requests",
+  "ts": "20200601",
+  "url": "https://web.archive.org/web/20200601000000id_/https://pypi.org/project/requests/",
+  "file": "fixtures/real/pypi-requests/20200601.html"
+ },
+ {
+  "id": "pypi-requests",
+  "ts": "20250601",
+  "url": "https://web.archive.org/web/20250601000000id_/https://pypi.org/project/requests/",
+  "file": "fixtures/real/pypi-requests/20250601.html"
+ },
+ {
+  "id": "rust-blog",
+  "ts": "20240601",
+  "url": "https://web.archive.org/web/20240601000000id_/https://blog.rust-lang.org/",
+  "file": "fixtures/real/rust-blog/20240601.html"
+ },
+ {
+  "id": "rust-blog",
+  "ts": "20250601",
+  "url": "https://web.archive.org/web/20250601000000id_/https://blog.rust-lang.org/",
+  "file": "fixtures/real/rust-blog/20250601.html"
+ },
+ {
+  "id": "docsrs-releases",
+  "ts": "20230601",
+  "url": "https://web.archive.org/web/20230601000000id_/https://docs.rs/releases",
+  "file": "fixtures/real/docsrs-releases/20230601.html"
+ },
+ {
+  "id": "docsrs-releases",
+  "ts": "20250601",
+  "url": "https://web.archive.org/web/20250601000000id_/https://docs.rs/releases",
+  "file": "fixtures/real/docsrs-releases/20250601.html"
+ },
+ {
+  "id": "py-downloads",
+  "ts": "20250601",
+  "url": "https://web.archive.org/web/20250601000000id_/https://www.python.org/downloads/",
+  "file": "fixtures/real/py-downloads/20250601.html"
+ }
+]

@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="docs.rs 0.6.0 (e422fa63 2023-03-25)">
+        <link rel="stylesheet" href="/-/static/vendored.css?0-6-0-e422fa63-2023-03-25" media="all" />
+        <link rel="stylesheet" href="/-/static/style.css?0-6-0-e422fa63-2023-03-25" media="all" />
+
+        <link rel="search" href="/-/static/opensearch.xml" type="application/opensearchdescription+xml" title="Docs.rs" />
+
+        <title>Releases - Docs.rs</title>
+
+        <script nonce="6lAusaiLrnIoZZBwbSxuuwq75UlXvFGHn4FAhyPCtR251yiZ">function applyTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+}
+
+window.addEventListener('storage', function (ev) {
+  if (ev.key === 'rustdoc-theme') {
+    applyTheme(ev.newValue);
+  }
+});
+
+// see ./storage-change-detection.html for details
+window.addEventListener('message', function (ev) {
+  if (ev.data && ev.data.storage && ev.data.storage.key === 'rustdoc-theme') {
+    applyTheme(ev.data.storage.value);
+  }
+});
+
+applyTheme(window.localStorage.getItem('rustdoc-theme'));
+</script><script defer type="text/javascript" nonce="6lAusaiLrnIoZZBwbSxuuwq75UlXvFGHn4FAhyPCtR251yiZ" src="/-/static/menu.js?0-6-0-e422fa63-2023-03-25"></script>
+        <script defer type="text/javascript" nonce="6lAusaiLrnIoZZBwbSxuuwq75UlXvFGHn4FAhyPCtR251yiZ" src="/-/static/index.js?0-6-0-e422fa63-2023-03-25"></script>
+    </head>
+
+    <body class="centered">
+<div class="nav-container">
+    <div class="container">
+        <div class="pure-menu pure-menu-horizontal" role="navigation" aria-label="Main navigation">
+            <form action="/releases/search"
+                  method="GET"
+                  class="landing-search-form-nav  ">
+
+                
+                <a href="/" class="pure-menu-heading pure-menu-link docsrs-logo" aria-label="Docs.rs">
+                    <span title="Docs.rs"><span class="fa-svg " aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M290.8 48.6l78.4 29.7L288 109.5 206.8 78.3l78.4-29.7c1.8-.7 3.8-.7 5.7 0zM136 92.5V204.7c-1.3 .4-2.6 .8-3.9 1.3l-96 36.4C14.4 250.6 0 271.5 0 294.7V413.9c0 22.2 13.1 42.3 33.5 51.3l96 42.2c14.4 6.3 30.7 6.3 45.1 0L288 457.5l113.5 49.9c14.4 6.3 30.7 6.3 45.1 0l96-42.2c20.3-8.9 33.5-29.1 33.5-51.3V294.7c0-23.3-14.4-44.1-36.1-52.4l-96-36.4c-1.3-.5-2.6-.9-3.9-1.3V92.5c0-23.3-14.4-44.1-36.1-52.4l-96-36.4c-12.8-4.8-26.9-4.8-39.7 0l-96 36.4C150.4 48.4 136 69.3 136 92.5zM392 210.6l-82.4 31.2V152.6L392 121v89.6zM154.8 250.9l78.4 29.7L152 311.7 70.8 280.6l78.4-29.7c1.8-.7 3.8-.7 5.7 0zm18.8 204.4V354.8L256 323.2v95.9l-82.4 36.2zM421.2 250.9c1.8-.7 3.8-.7 5.7 0l78.4 29.7L424 311.7l-81.2-31.1 78.4-29.7zM523.2 421.2l-77.6 34.1V354.8L528 323.2v90.7c0 3.2-1.9 6-4.8 7.3z"/></svg></span></span>
+                    <span class="title">Docs.rs</span>
+                </a>
+<div class="spacer"></div>
+                
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item pure-menu-has-children">
+                        <a href="#" class="pure-menu-link" aria-label="Rust">Rust</a>
+                        <ul class="pure-menu-children">
+                            
+    <li class="pure-menu-item">
+        <a class="pure-menu-link " href="https:&#x2F;&#x2F;docs.rs&#x2F;about" target="_blank">
+            About docs.rs
+        </a>
+    </li>
+
+                            
+    <li class="pure-menu-item">
+        <a class="pure-menu-link " href="https:&#x2F;&#x2F;foundation.rust-lang.org&#x2F;policies&#x2F;privacy-policy&#x2F;#docs.rs" target="_blank">
+            Privacy policy
+        </a>
+    </li>
+
+                            
+    <li class="pure-menu-item">
+        <a class="pure-menu-link " href="https:&#x2F;&#x2F;www.rust-lang.org&#x2F;" target="_blank">
+            Rust website
+        </a>
+    </li>
+
+                            
+    <li class="pure-menu-item">
+        <a class="pure-menu-link " href="https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;book&#x2F;" target="_blank">
+            The Book
+        </a>
+    </li>
+
+
+                            
+    <li class="pure-menu-item">
+        <a class="pure-menu-link " href="https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;" target="_blank">
+            Standard Library API Reference
+        </a>
+    </li>
+
+
+                            
+    <li class="pure-menu-item">
+        <a class="pure-menu-link " href="https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;rust-by-example&#x2F;" target="_blank">
+            Rust by Example
+        </a>
+    </li>
+
+
+                            
+    <li class="pure-menu-item">
+        <a class="pure-menu-link " href="https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;cargo&#x2F;guide&#x2F;" target="_blank">
+            The Cargo Guide
+        </a>
+    </li>
+
+
+                            
+    <li class="pure-menu-item">
+        <a class="pure-menu-link " href="https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;nightly&#x2F;clippy" target="_blank">
+            Clippy Documentation
+        </a>
+    </li>
+
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div id="search-input-nav">
+                    <label for="nav-search">
+                        <span class="fa-svg " aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                    </label>
+
+                    
+                    
+                    <input id="nav-search" name="query" type="text" aria-label="Find crate by search query" tabindex="-1"
+                        placeholder="Find crate">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="docsrs-package-container">
+        <div class="container">
+            <div class="description-container">
+                <h1 id="crate-title">Releases</h1>
+                <div class="description">Recently uploaded crates</div>
+
+                <div class="pure-menu pure-menu-horizontal">
+                        <ul class="pure-menu-list">
+                            <li class="pure-menu-item">
+                                <a href="/releases" class="pure-menu-link pure-menu-active">
+                                    <span class="fa-svg fa-svg-fw " aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M272 96c-78.6 0-145.1 51.5-167.7 122.5c33.6-17 71.5-26.5 111.7-26.5h88c8.8 0 16 7.2 16 16s-7.2 16-16 16H288 216s0 0 0 0c-16.6 0-32.7 1.9-48.3 5.4c-25.9 5.9-49.9 16.4-71.4 30.7c0 0 0 0 0 0C38.3 298.8 0 364.9 0 440v16c0 13.3 10.7 24 24 24s24-10.7 24-24V440c0-48.7 20.7-92.5 53.8-123.2C121.6 392.3 190.3 448 272 448l1 0c132.1-.7 239-130.9 239-291.4c0-42.6-7.5-83.1-21.1-119.6c-2.6-6.9-12.7-6.6-16.2-.1C455.9 72.1 418.7 96 376 96L272 96z"/></svg></span>
+                                    <span class="title">Recent</span>
+                                </a>
+                            </li>
+
+                            <li class="pure-menu-item">
+                                <a href="/releases/stars" class="pure-menu-link">
+                                    <span class="fa-svg fa-svg-fw " aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg></span>
+                                    <span class="title">Stars</span>
+                                </a>
+                            </li>
+
+                            <li class="pure-menu-item">
+                                <a href="/releases/recent-failures"
+                                    class="pure-menu-link">
+                                    <span class="fa-svg fa-svg-fw " aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32z"/></svg></span>
+                                    <span class="title">Recent Failures</span>
+                                </a>
+                            </li>
+
+                            <li class="pure-menu-item">
+                                <a href="/releases/failures"
+                                    class="pure-menu-link">
+                                    <span class="fa-svg fa-svg-fw " aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M287.9 0C297.1 0 305.5 5.25 309.5 13.52L378.1 154.8L531.4 177.5C540.4 178.8 547.8 185.1 550.7 193.7C553.5 202.4 551.2 211.9 544.8 218.2L433.6 328.4L459.9 483.9C461.4 492.9 457.7 502.1 450.2 507.4C442.8 512.7 432.1 513.4 424.9 509.1L287.9 435.9L150.1 509.1C142.9 513.4 133.1 512.7 125.6 507.4C118.2 502.1 114.5 492.9 115.1 483.9L142.2 328.4L31.11 218.2C24.65 211.9 22.36 202.4 25.2 193.7C28.03 185.1 35.5 178.8 44.49 177.5L197.7 154.8L266.3 13.52C270.4 5.249 278.7 0 287.9 0L287.9 0zM287.9 78.95L235.4 187.2C231.9 194.3 225.1 199.3 217.3 200.5L98.98 217.9L184.9 303C190.4 308.5 192.9 316.4 191.6 324.1L171.4 443.7L276.6 387.5C283.7 383.7 292.2 383.7 299.2 387.5L404.4 443.7L384.2 324.1C382.9 316.4 385.5 308.5 391 303L476.9 217.9L358.6 200.5C350.7 199.3 343.9 194.3 340.5 187.2L287.9 78.95z"/></svg></span>
+                                    <span class="title">Failures By Stars</span>
+                                </a>
+                            </li>
+
+                            <li class="pure-menu-item">
+                                <a href="/releases/activity"
+                                    class="pure-menu-link">
+                                    <span class="fa-svg fa-svg-fw " aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"/></svg></span>
+                                    <span class="title">Activity</span>
+                                </a>
+                            </li>
+
+                            <li class="pure-menu-item">
+                                <a href="/releases/queue" class="pure-menu-link">
+                                    <span class="fa-svg fa-svg-fw " aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM16 232v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V232c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V392c0-13.3-10.7-24-24-24H40z"/></svg></span>
+                                    <span class="title">Queue</span>
+                                </a>
+                            </li></ul>
+                    </div></div>
+        </div>
+    </div>
+<div class="container">
+        <div class="recent-releases-container">
+            <ul>
+                <li>
+                        <a href="/timada-cobase-client/0.6.0/timada_cobase_client/" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    timada-cobase-client-0.6.0
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    A client for timada cobase
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:35:48Z">
+                                        one minute ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/packed_flags/0.9.0/packed_flags/" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    packed_flags-0.9.0
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    A package that allows lists of flags to be packed in a somewhat efficient way while still being accessible as a list
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:33:48Z">
+                                        3 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/crate/sinc/0.7.0" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    sinc-0.7.0
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    A cross-platform dotfiles manager written in Rust.
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:33:34Z">
+                                        3 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/crate/cannonball/0.2.5" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    cannonball-0.2.5
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    QEMU tracing framework
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:33:28Z">
+                                        3 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/entity_id_core/0.0.2/entity_id_core/" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    entity_id_core-0.0.2
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    Production-ready entity IDs for your web application
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:32:08Z">
+                                        4 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/entity_id_derive/0.0.2/entity_id_derive/" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    entity_id_derive-0.0.2
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    Production-ready entity IDs for your web application
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:31:56Z">
+                                        4 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/entity_id/0.0.2/entity_id/" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    entity_id-0.0.2
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    Production-ready entity IDs for your web application
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:31:49Z">
+                                        5 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/solrust/0.1.9/solrust/" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    solrust-0.1.9
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    Solr Client for Rust
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:31:29Z">
+                                        5 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/bluefin/0.1.2/bluefin/" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    bluefin-0.1.2
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    An experimental, secure, P2P, transport-layer protocol.
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:28:44Z">
+                                        8 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/solrust_derive_internals/0.1.6/solrust_derive_internals/" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    solrust_derive_internals-0.1.6
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    Implementations of derive macro for solrust.
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:27:12Z">
+                                        9 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/crate/cannonball/0.2.4" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    cannonball-0.2.4
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    QEMU tracing framework
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:26:47Z">
+                                        10 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/crate/evento/0.5.5" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    evento-0.5.5
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    A collection of libraries and tools that help you build DDD, CQRS, and event sourcing.
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:25:26Z">
+                                        11 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/crate/enshrine/0.1.0" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    enshrine-0.1.0
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    Secure decentralized computing.
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:23:41Z">
+                                        13 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/trane/0.13.6/trane/" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    trane-0.13.6
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    An automated system for learning complex skills
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:23:35Z">
+                                        13 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/crate/escrin/0.1.0" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    escrin-0.1.0
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    Secure decentralized computing.
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:21:16Z">
+                                        15 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/crate/libfuzzer/0.0.0" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    libfuzzer-0.0.0
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    https:&#x2F;&#x2F;github.com&#x2F;rust-fuzz&#x2F;libfuzzer&#x2F;issues&#x2F;55
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:21:11Z">
+                                        15 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/crus/0.1.1/crus/" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    crus-0.1.1
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    upload test
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:21:06Z">
+                                        15 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/crate/super-auto-pets-ai/0.1.1" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    super-auto-pets-ai-0.1.1
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    Super Auto Pets AI, built with Rust
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:20:48Z">
+                                        16 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/caffe2op-reciprocal/0.1.5-alpha.0/caffe2op_reciprocal/" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    caffe2op-reciprocal-0.1.5-alpha.0
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    xxx
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:20:42Z">
+                                        16 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/param_builder/0.1.2/param_builder/" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    param_builder-0.1.2
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    A param list builder for tokio postgres
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:17:32Z">
+                                        19 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/caffe2op-rankloss/0.1.5-alpha.0/caffe2op_rankloss/" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    caffe2op-rankloss-0.1.5-alpha.0
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    xxx
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:16:51Z">
+                                        19 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/caffe2op-quantile/0.1.5-alpha.0/caffe2op_quantile/" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    caffe2op-quantile-0.1.5-alpha.0
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    xxx
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:13:44Z">
+                                        23 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/caffe2op-quantdecode/0.1.5-alpha.0/caffe2op_quantdecode/" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    caffe2op-quantdecode-0.1.5-alpha.0
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    xxx
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:10:34Z">
+                                        26 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/rbw/1.7.0/rbw/" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    rbw-1.7.0
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    Unofficial Bitwarden CLI
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:07:26Z">
+                                        29 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/crate/pocket-relay/0.5.0" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    pocket-relay-0.5.0
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    Pocket Relay Server
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:05:08Z">
+                                        31 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/crate/pathbuster/0.3.4" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    pathbuster-0.3.4
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    A path-normalization pentesting tool.
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:04:57Z">
+                                        31 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/bitfrob/1.1.0/bitfrob/" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    bitfrob-1.1.0
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    A sibling crate for `bytemuck`, this is where forbid(unsafe_code) utilities live.
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:04:49Z">
+                                        32 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/caffe2op-prepend/0.1.5-alpha.0/caffe2op_prepend/" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    caffe2op-prepend-0.1.5-alpha.0
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    xxx
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:04:33Z">
+                                        32 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/dateparser/0.2.0/dateparser/" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    dateparser-0.2.0
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    Parse dates in string formats that are commonly used
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T06:00:32Z">
+                                        36 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="/super-auto-pets-ai/0.1.0/super_auto_pets_ai/" class="release">
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-sm-6-24 pure-u-md-5-24 name">
+                                    super-auto-pets-ai-0.1.0
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-14-24 pure-u-md-16-24 description">
+                                    Super Auto Pets AI, built with Rust
+                                </div>
+
+                                <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-3-24 date"
+                                        title="2023-03-26T05:59:47Z">
+                                        37 minutes ago
+                                    </div>
+                            </div>
+                        </a>
+                    </li></ul>
+
+            <div class="pagination">
+                <a class="pure-button pure-button-normal" href="/releases/recent/2">
+                            Next Page <span class="fa-svg " aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></span>
+                        </a>
+            </div>
+        </div>
+    </div><script nonce="6lAusaiLrnIoZZBwbSxuuwq75UlXvFGHn4FAhyPCtR251yiZ" type="text/javascript" src="/-/static/keyboard.js?0-6-0-e422fa63-2023-03-25"></script></body>
+</html>

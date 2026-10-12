@@ -1,0 +1,16 @@
+name: ci
+on:
+  push: { branches: [main] }
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@1.85
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo build --release --locked
+      - name: replay tests (saved snapshots, no network)
+        run: cargo test --release --locked
+      - name: eval output is committed and current
+        run: cargo run --release --locked -- eval > /dev/null && git diff --exit-code eval/
