@@ -4,7 +4,7 @@ A small Rust service that re-checks public pages and raises an alert when a layo
 
 Built by Srinivas Sivaratri as a demo for Datamint's Rust Systems Engineer role. Not affiliated with Datamint.
 
-Live: https://sivaratrisrinivas.github.io/page-canary/ (rebuilt by a GitHub Action that runs one polite check every 6 hours) · Video: [site/demo.mp4](site/demo.mp4) · Full results: [eval/RESULTS.md](eval/RESULTS.md)
+Live: https://sivaratrisrinivas.github.io/page-canary/ (rebuilt by a GitHub Action that runs one polite check every 6 hours) · Video (75 s): [site/demo.mp4](site/demo.mp4), also on the [live site](https://sivaratrisrinivas.github.io/page-canary/demo.mp4) · Full results: [eval/RESULTS.md](eval/RESULTS.md)
 
 ## Why
 
